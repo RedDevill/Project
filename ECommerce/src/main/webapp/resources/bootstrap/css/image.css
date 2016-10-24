@@ -52,12 +52,12 @@
     text-align: right;
 }
 
-/*
+
 .banner-hold-main .subheadline {
     margin-top: -1px;
     margin-bottom: 9px;
     font-size: 22px;
-}  */
+}  
 .banner-hold-main .subheadline {
     margin: -2px 0 8px;
     font-family: "Primary-Regular", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -72,6 +72,7 @@
     font-weight: normal;
     font-size: 36px;
 }
+/*
 h5, .h5, h6, .h6, h7, .h7, h8, .h8 {
     letter-spacing: -0.25px;
 }
@@ -96,3 +97,4 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
     font-weight: normal;
 }
+*/

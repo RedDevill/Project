@@ -21,7 +21,7 @@
 	
 	
 	
-<body style="background-image:url(football4.jpg);">
+<body style="background-image:resources/images/football3.jpg" alt="">;">
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -37,9 +37,9 @@
         
        <div id="navbar1" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a href="#">HOME</a></li>
-      <li  class="active"><a href="#">SIGNUP</a></li>
-      <li><a href="#">ABOUT US</a></li>
+      <li><a href="index">HOME</a></li>
+      <li  class="active"><a href="">SIGNUP</a></li>
+      <li><a href="About Us">ABOUT US</a></li>
     </ul>
       <ul class="nav navbar-nav navbar-right">
       <form class="navbar-form navbar-left" role="search">
@@ -146,3 +146,6 @@
             </form>
         </div>
     </div>
+    </div>
+    </body>
+    </html>

@@ -23,86 +23,7 @@
 	
 	
 <body>
- <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-       <!-- <img src="resources/images/logo.jpg" alt="myClub"> -->
-       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
-          <!-- span class="sr-only">Toggle navigation</span-->
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-         <a class="navbar-brand" href="#"> <img src="resources/images/logo.jpg" alt="myClub"></a>
-        </div>
-        
-       <div id="navbar1" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">HOME</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SHOP <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">MEN's</a></li>
-          <li><a href="#">WOMEN's</a></li>
-          <li><a href="#">KIDS</a></li>
-        </ul>
-      </li>
-      <li><a href="#">BRANDS</a></li>
-      <li><a href="#">ABOUT US</a></li>
-    </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-     <!--  <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
-      
-     <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>  -->
-      <li class="dropdown">
-          <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a>
-			<ul id="login-dp" class="dropdown-menu">
-				<li>
-					 <div class="row">
-							<div class="col-md-12">
-								Login via
-								<div class="social-buttons">
-									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-								</div>
-                                or
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-										</div>
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-										</div>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-										</div>
-										<div class="checkbox">
-											 <label>
-											 <input type="checkbox"> keep me logged-in
-											 </label>
-										</div>
-								 </form>
-							</div>
-							<div class="bottom text-center">
-								New here ? <a href="#"><b>Join Us</b></a>
-							</div>
-					 </div>
-				</li>
-			</ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-  
+<jsp:include page="header.jsp"></jsp:include>
   
   
   
@@ -225,7 +146,8 @@
 
 <!--   ************************  Shop section   **************************** -->
 
-
+<br>
+<br>
 	<!--  ***********************   TRending Clubs   **********************  -->
 
 <div>
@@ -255,7 +177,7 @@
   </div>
 </div>
  
- 
+<br> 
  		<!--    ***************************      myCLUB    ************************** -->
  
 
@@ -286,48 +208,13 @@
     </div>
   </div>
 </div>
- 
- 
- 
+ </div>
+ </div>
+ </div>
+ </div>
  	<!--   ***************************   BODY   ***************************** -->
- 
-    
-<div class="container-fluid">
- 
-</div>
-
-
-
-
-	<!--  ******************************   footer    ***************************-->
-
-
-
-
-<footer class="bs-footer" role="contentinfo" style= "position:fixed">
-  <div class="container">
-    <div class="bs-social">
-      <ul class="bs-social-buttons">
-        <li class="facebook-button">
-          <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbootsnipp.com&width=130&height=20&colorscheme=light&layout=button_count&action=like&show_faces=false&send=true&appId=112989545392380" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:20px;" class="facebook-btn" allowTransparency="true"></iframe>
-        </li>
-        <li class="follow-btn">
-          <iframe allowtransparency="true" frameborder="0" scrolling="no"
-            src="//platform.twitter.com/widgets/follow_button.html?screen_name=myClub"
-            style="width:236px; height:20px;" class="twitter-follow-button twitter-follow-button"></iframe>
-        </li>
-        <li class="tweet-btn">
-          <iframe allowtranspa
-          rency="true" frameborder="0" scrolling="no"
-                 src="https://platform.twitter.com/widgets/tweet_button.html?lang=en&via=myClub&url= #"
-                 style="width:107; height:20px;" class="twitter-share-button twitter-count-horizontal"></iframe>
-        </li>
-      </ul>
-    </div>
-    <p>myClub.com by <a href="#" target="_blank">Harsh Ahlawat</a>. | <a href="https://plus.google.com/" target="_blank" rel="publisher">Google+</a> | <a href="http://myClub.com/privacy" target="_blank">Site Privacy policy</a><!-- | Featured snippets are <a href="http://myClub.com/license">MIT license.</a> | Built with <a href="http://getbootstrap.com" target="_blank" title="bootstrap framework"><img src="http://bootsnipp.com/img/laravel.jpg" alt="laravel php framework"></a> Hosted on <a href="http://pagodabox.com" target="_blank" title="pagodabox php cloud hosting"><img src="http://bootsnipp.com/img/pagoda.jpg" alt="pagodabox php cloud hosting"></a> | Bootstrap CDN by <a href="http://bit.ly/maxCDN" target="_blank"><img src="http://www.ftjcfx.com/image-7593394-11373487" width="1" height="1" border="0"/><img src="http://bootsnipp.com/img/maxcdn.png"></a></p>-->
-  </div>
-  
-</footer> 
-</body>
-</html>
-
+<div>
+  <jsp:include page="footer.jsp"/>
+ </div>
+    </body>
+    </html>
