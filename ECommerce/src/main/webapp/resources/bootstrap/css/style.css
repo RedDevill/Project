@@ -34,13 +34,6 @@
       padding-bottom: 100px;
     }
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: black;
-      color: white;
-       padding-top: 10px;
-      padding-bottom: 10px;
-    }
 
 
 
@@ -48,7 +41,7 @@
 
 body{
    padding:0px;
-   background-color:lightgrey;
+   background-color:white;
 }
 
 #login-dp{

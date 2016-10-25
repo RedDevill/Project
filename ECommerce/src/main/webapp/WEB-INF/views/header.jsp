@@ -33,7 +33,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-         <a class="navbar-brand" href="#"> <img src="resources/images/logo.jpg" alt="myClub"></a>
+         <a class="navbar-brand" href="index"> <img src="resources/images/logo.jpg" alt="myClub"></a>
         </div>
         
        <div id="navbar1" class="navbar-collapse collapse">
@@ -56,9 +56,6 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-     <!--  <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
-      
-     <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>  -->
       <li class="dropdown">
           <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a>
 			<ul id="login-dp" class="dropdown-menu">

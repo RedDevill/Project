@@ -1,5 +1,4 @@
-
-<body><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 	<!--    *****************************   HEAD    ***************************  -->
@@ -18,8 +17,13 @@
 </head>
 
 
-<body>
 
+	<!--   ***************************    Nav Bar   *******************************-->
+	
+	
+	
+<body>
+<div>
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -30,7 +34,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-         <a class="navbar-brand" href="#"> <img src="resources/images/logo.jpg" alt="myClub"></a>
+         <a class="navbar-brand" href="index"> <img src="resources/images/logo.jpg" alt="myClub"></a>
         </div>
         
        <div id="navbar1" class="navbar-collapse collapse">
@@ -44,18 +48,18 @@
         </ul>
       </li>
       <li class="active"><a href="About Us">ABOUT US</a></li>
+    
     </ul>
       <ul class="nav navbar-nav navbar-right">
-      <form class="navbar-form navbar-left" role="search">
+      <li><a href="Signup"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
+      </ul>
+<!--      <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-     <!--  <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
-      
-     <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>  -->
-      <li class="dropdown">
+       <li class="dropdown">
           <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a>
 			<ul id="login-dp" class="dropdown-menu">
 				<li>
@@ -94,13 +98,13 @@
 				</li>
 			</ul>
         </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  </nav>
-<div>
-<h1></h1>
+      </ul>-->
+    </div>
+  </div>
+</nav> 
 </div>
+  <br>
+  <br>
 <div class="container">
 <br>
 <br>
@@ -123,13 +127,13 @@
   <br>
  
  <div class="container">
-  <h4>BRANDS</h4>
+  <h4><u>BRANDS</u></h4>
   <blockquote>
   <p>myClub understands its shoppers needs and caters to them with choice of jersey , accessories, footwear from over various leading sports and international brands. Prominent brands include Adidas, Nike, Puma, Umbro , Hubolt ,kappa to name a few. You can also shop from some replicas of top brands .</p> 
   </blockquote>
 </div>
 <br>
 <br>
-
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

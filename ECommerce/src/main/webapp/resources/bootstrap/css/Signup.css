@@ -38,11 +38,15 @@
 
 
 /*   ------------------------------login -------------------------------- */
-
-body{ background-image: url(Football2.jpg);
+html {
+  background-image: url('resources/images/football4.jpg');
+}
+body{ 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+     padding-right: 10px;
+      padding-left: 10px;
 	
 }
 
@@ -156,7 +160,3 @@ legend{
 	}
 }
 
-body{
-    background:url('resources/images/Football2.jpg');
-    padding:50px;
-}
