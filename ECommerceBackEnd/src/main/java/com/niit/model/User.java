@@ -11,6 +11,7 @@ public class User {
 	private String lastname;
 	private String email;
 	private String spassword;
+	private String reenterpassword;
 	
 	
 	public String getReenterpassword() {
@@ -22,7 +23,7 @@ public class User {
 	public void setSpassword(String spassword) {
 		this.spassword = spassword;
 	}
-	private String reenterpassword;
+	
 	
 	public String getUsername() {
 		return username;

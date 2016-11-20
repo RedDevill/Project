@@ -12,9 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
-     <link rel="stylesheet" href="resources/bootstrap/css/style.css">
-     <link rel="stylesheet" href="resources/bootstrap/css/image.css">
-    	<link rel="stylesheet" href="resources/bootstrap/css/demo1.css">
+    <link rel="stylesheet" href="resources/bootstrap/css/style.css">
+    <link rel="stylesheet" href="resources/bootstrap/css/image.css"> 
 	<link rel="stylesheet" href="resources/bootstrap/css/footer-distributed-with-address-and-phones.css">
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
@@ -24,12 +23,7 @@
 	<!--  ******************************   footer    ***************************-->
 
 
-
-  
-
-	<body>
-	</body>
-	
+<body>
 		<!-- The content of your page would go here. -->
 
 		<footer class="footer-distributed">
@@ -49,11 +43,11 @@
 					<a href="About Us">About</a>
 					·
 					<a href="#">Faq</a>
-					·
-					<a href="#">Contact</a>
+					
+					
 				</p>
 
-				<p class="footer-company-name">myClub.com &copy; 2016</p>
+				<p class="footer-company-name">myClub.com &copy; 2016 | All Rights Reserved</p>
 			</div>
 
 			<div class="footer-center">
@@ -65,7 +59,7 @@
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>+1 999 123456</p>
+					<p><a href="Contact Us">Contact Us</p>
 				</div>
 
 				<div>

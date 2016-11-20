@@ -139,7 +139,7 @@
 <div class="banner-hold-main img1">
             <div class="banner-img-content">
                <div class="banner-content content-left" style="top:40%;max-width: 1200px;">
-                  <h2 class="faster-headline headline" style="color: white; font-family: " primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">FOR</h2>
+                  <h2 class="faster-headline headline" style="color: white; font-family:"primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">FOR</h2>
   			   	  <h3 class="faster-headline headline" style="color: white; font-family: " primary-bold" ,arial,"helvetica="" neue",helvetica,sans-serif="" !important;"=""><u ffcolor="gold">BASKETBALL</u></h3>
                   <h4 class="subheadline sale-banner-font-set" style="color: white; text-transform: none !important; line-height: 24px !important; font-size: 40px; letter-spacing: 1px;">JAM</h4>
                

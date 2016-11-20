@@ -25,7 +25,7 @@
 	
 	
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="WEB-INF/views/header.jsp"></jsp:include>
 <br>
 <br>
 <div style="margin-left:200px; margin-top:100px;";>

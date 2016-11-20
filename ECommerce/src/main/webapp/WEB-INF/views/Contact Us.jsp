@@ -4,7 +4,7 @@
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
-  <title>Sign Up</title>
+  <title>myClub</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -16,31 +16,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
-    <link rel="stylesheet" href="resources/bootstrap/css/Signup.css">
-    
    
-    
-    
-    <script type="text/javascript">
-    function Validate() {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("ReEnterPassword").value;
-        if (password != confirmPassword) {
-            alert("Passwords do not match.");
-            return false;
-        }
-        return true;
-    }
-</script>
 </head>
 
 
 
-	<!--   ***************************    Nav Bar   ******************************* -->
+	<!--   ***************************    Nav Bar   *******************************-->
 	
 	
 	
-<body>
+<body style=background >
+<div>
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -56,7 +42,7 @@
         
        <div id="navbar1" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li ><a href="index">HOME</a></li>
+      <li><a href="index">HOME</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SHOP <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">MEN's</a></li>
@@ -65,7 +51,7 @@
         </ul>
       </li>
       <li><a href="About Us">ABOUT US</a></li>
-      <li class="active"><a href="Signup">SIGN UP</a></li>
+    
     </ul>
       <ul class="nav navbar-nav navbar-right">
       <form class="navbar-form navbar-left" role="search">
@@ -114,67 +100,60 @@
 			</ul>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    </div>
+  </div>
+</nav> 
+</div>
+  <br>
+  <br>
 <br>
 <br>
-<div style="background-img:url(football4.jpg);">
-<div class="container"style="margin-top:70px;">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
-            <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
-            <form action="SignUP" method="post" class="form" role="form">
-            <div class="row">
-                <div class="col-xs-6 col-md-6">
-                    <input class="form-control" name="firstname" placeholder="First Name" type="text"
-                        required autofocus />
-                </div>
-                <div class="col-xs-6 col-md-6">
-                    <input class="form-control" name="lastname" placeholder="Last Name" type="text" required />
-                </div>
+<div class="container">
+	<div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm">
+          <form class="form-horizontal" action="" method="post">
+          <fieldset>
+            <legend class="text-center">Contact us</legend>
+    
+            <!-- Name input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Name</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+              </div>
             </div>
-            <input class="form-control"  name="youremail" placeholder="Your Email" type="email" />
-            <input class="form-control" id="password" name="password" placeholder="Password" type="password" />
-            <input class="form-control" id="ReEnterPassword" name="reenterpassword" placeholder="Re-Enter Password" type="password" />
-            <label for="">
-                Birth Date</label>
-            <div class="row">
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Month">Month</option>
-                        
-                    </select>
-                </div>
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Day">Day</option>
-                    </select>
-                </div>
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Year">Year</option>
-                    </select>
-                </div>
+    
+            <!-- Email input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Your E-mail</label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+              </div>
             </div>
-            <label class="radio-inline">
-                <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
-                Male
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
-                Female
-            </label>
-            <br />
-            <br />
-            <button id="SignUP" class="btn btn-lg btn-primary btn-block" type="submit" onclick="return Validate()">Sign Up
-             </button>
-            </form>
+    
+            <!-- Message body -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Your message</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
         </div>
-        
-    </div>
-    </div>
-    </div>
-    <jsp:include page="footer.jsp"></jsp:include>
-    </body>
-    </html>
+      </div>
+	</div>
+</div>
+<br>
+<br>
+<jsp:include page="footer.jsp"></jsp:include>
+</body>
+</html>

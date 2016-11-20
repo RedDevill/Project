@@ -48,6 +48,7 @@
       </li>
       <li><a href="#">BRANDS</a></li>
       <li><a href="About Us">ABOUT US</a></li>
+      <li><a href="#">ADMIN</a></li>
     </ul>
       <ul class="nav navbar-nav navbar-right">
       <form class="navbar-form navbar-left" role="search">

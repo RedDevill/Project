@@ -37,5 +37,39 @@ public class HomeController {
 		ModelAndView mv=new ModelAndView("About Us");
 		return mv;
 	}
-
+	
+	@RequestMapping("Contact Us")
+	public ModelAndView ContactUs()
+	{
+		ModelAndView mv=new ModelAndView("Contact Us");
+		return mv;
+	}
+	
+	@RequestMapping("Admin")
+	public ModelAndView Admin()
+	{
+		ModelAndView mv=new ModelAndView("Admin");
+		return mv;
+	}
+	
+	@RequestMapping("Add Category")
+	public ModelAndView AddCategory()
+	{
+		ModelAndView mv=new ModelAndView("AddCategory");
+		return mv;
+	}
+	
+	@RequestMapping("Add Product")
+	public ModelAndView AddProduct()
+	{
+		ModelAndView mv=new ModelAndView("AddProduct");
+		return mv;
+	}
+	
+	@RequestMapping("Add Supplier")
+	public ModelAndView AddSupplier()
+	{
+		ModelAndView mv=new ModelAndView("AddSupplier");
+		return mv;
+	}
 }

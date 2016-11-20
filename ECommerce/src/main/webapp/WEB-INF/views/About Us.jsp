@@ -7,6 +7,10 @@
   <title>myClub</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -48,18 +52,15 @@
         </ul>
       </li>
       <li class="active"><a href="About Us">ABOUT US</a></li>
-    
-    </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="Signup"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
-      </ul>
-<!--      <form class="navbar-form navbar-left" role="search">
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+      <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-       <li class="dropdown">
+      <li class="dropdown">
           <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a>
 			<ul id="login-dp" class="dropdown-menu">
 				<li>
@@ -98,7 +99,7 @@
 				</li>
 			</ul>
         </li>
-      </ul>-->
+      </ul>
     </div>
   </div>
 </nav> 
