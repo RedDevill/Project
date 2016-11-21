@@ -52,21 +52,21 @@ public class HomeController {
 		return mv;
 	}
 	
-	@RequestMapping("Add Category")
+	@RequestMapping("AddCategory")
 	public ModelAndView AddCategory()
 	{
 		ModelAndView mv=new ModelAndView("AddCategory");
 		return mv;
 	}
 	
-	@RequestMapping("Add Product")
+	@RequestMapping("AddProduct")
 	public ModelAndView AddProduct()
 	{
 		ModelAndView mv=new ModelAndView("AddProduct");
 		return mv;
 	}
 	
-	@RequestMapping("Add Supplier")
+	@RequestMapping("AddSupplier")
 	public ModelAndView AddSupplier()
 	{
 		ModelAndView mv=new ModelAndView("AddSupplier");

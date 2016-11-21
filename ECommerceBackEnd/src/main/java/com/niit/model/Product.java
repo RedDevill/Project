@@ -5,26 +5,26 @@ import org.springframework.stereotype.Component;
 @Component
 public class Product {
 	
-	private String ProductID;
-	private String ProductName;
-	private String ProductDescription;
+	private String productID;
+	private String productName;
+	private String productDescription;
 
 	public String getProductID() {
-		return ProductID;
+		return productID;
 	}
 	public void setProductID(String productID) {
-		ProductID = productID;
+		this.productID = productID;
 	}
 	public String getProductName() {
-		return ProductName;
+		return productName;
 	}
 	public void setProductName(String productName) {
-		ProductName = productName;
+		this.productName = productName;
 	}
 	public String getProductDescription() {
-		return ProductDescription;
+		return productDescription;
 	}
 	public void setProductDescription(String productDescription) {
-		ProductDescription = productDescription;
+		this.productDescription = productDescription;
 	}
 }

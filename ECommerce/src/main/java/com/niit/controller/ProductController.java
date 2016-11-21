@@ -16,15 +16,15 @@ public class ProductController {
 	@Autowired
 	ProductDAO productDAO;
 
-	@RequestMapping("/submit")
-	public ModelAndView saveSignup(HttpServletRequest request){
+	@RequestMapping("/submit1")
+	public ModelAndView saveAddProduct(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView("#");
 		
-		String ProductID=request.getParameter("ProductID");
-		String ProductName=request.getParameter("ProductName");
-		String ProductDescription=request.getParameter("ProductDescription");
-		Product p=productDAO.addProduct(ProductID, ProductName, ProductDescription);
-		mv.addObject("Product", p);
+		String productID=request.getParameter("productID");
+		String productName=request.getParameter("productName");
+		String productDescription=request.getParameter("productDescription");
+		Product p=productDAO.addProduct(productID, productName, productDescription);
+		mv.addObject("product", p);
 		return mv;
 
 		

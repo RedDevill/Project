@@ -46,25 +46,25 @@
       <li><a href="index">HOME</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORY <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Category</a></li>
+          <li><a href="AddCategory">Add Category</a></li>
           <li><a href="#">View Category</a></li>
         </ul>
       </li>
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCT <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Product</a></li>
+          <li><a href="AddProduct">Add Product</a></li>
           <li><a href="#">View Product</a></li>
         </ul>
       </li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SUPPLIER <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Supplier</a></li>
+          <li><a href="AddSupplier">Add Supplier</a></li>
           <li><a href="#">View Supplier</a></li>
         </ul>
       </li>
     
     </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> LOG OUT</a></li>
+      <li><a href="index"><span class="glyphicon glyphicon-user"></span> LOG OUT</a></li>
       </ul>
 </div>
   </div>

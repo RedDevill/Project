@@ -1,5 +1,6 @@
 package com.niit.dao;
 
+
 import org.springframework.stereotype.Repository;
 
 import com.niit.model.Supplier;
@@ -8,12 +9,12 @@ import com.niit.model.Supplier;
 @Repository
 public class SupplierDAO {
 
-	public Supplier addSupplier(String SupplierID ,String SupplierName,String SupplierDescription)
+	public Supplier addSupplier(String supplierID ,String supplierName,String supplierDescription)
 	{
 		Supplier s =new Supplier();
-		s.setSupplierID(SupplierID);
-		s.setSupplierName(SupplierName);
-		s.setSupplierDescription(SupplierDescription);
+		s.setSupplierID(supplierID);
+		s.setSupplierName(supplierName);
+		s.setSupplierDescription(supplierDescription);
 	
 		return s;
 	}

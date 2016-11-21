@@ -5,26 +5,26 @@ import org.springframework.stereotype.Component;
 @Component
 public class Category {
 	
-	private String CategoryID;
-	private String CategoryName;
-	private String CategoryDescription;
+	private String categoryID;
+	private String categoryName;
+	private String categoryDescription;
 
 	public String getCategoryID() {
-		return CategoryID;
+		return categoryID;
 	}
 	public void setCategoryID(String categoryID) {
-		CategoryID = categoryID;
+		this.categoryID = categoryID;
 	}
 	public String getCategoryName() {
-		return CategoryName;
+		return categoryName;
 	}
 	public void setCategoryName(String categoryName) {
-		CategoryName = categoryName;
+		this.categoryName = categoryName;
 	}
 	public String getCategoryDescription() {
-		return CategoryDescription;
+		return categoryDescription;
 	}
 	public void setCategoryDescription(String categoryDescription) {
-		CategoryDescription = categoryDescription;
+		this.categoryDescription = categoryDescription;
 	}
 }

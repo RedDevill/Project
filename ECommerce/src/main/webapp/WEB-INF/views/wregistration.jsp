@@ -18,7 +18,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
     <link rel="stylesheet" href="resources/bootstrap/css/Signup.css">
    
-</script>
 </head>
 
 
@@ -59,7 +58,7 @@
 <br>
 <br>
 <div class="container">
- <p><h3>thanks for registering with us</h3></p>
+ <h3>thanks for registering with us</h3>
   <table class="table table-hover">
     <thead>
       <tr>

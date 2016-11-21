@@ -17,13 +17,13 @@ public class CategoryController {
 	CategoryDAO categoryDAO;
 
 	@RequestMapping("/submit")
-	public ModelAndView saveSignup(HttpServletRequest request){
-		ModelAndView mv = new ModelAndView("#");
+	public ModelAndView saveAddCategory(HttpServletRequest request){
+		ModelAndView mv = new ModelAndView("index");
 		
-		String CategoryID=request.getParameter("CategoryID");
-		String CategoryName=request.getParameter("CategoryName");
-		String CategoryDescription=request.getParameter("CategoryDescription");
-		Category c=categoryDAO.addCategory(CategoryID, CategoryName, CategoryDescription);
+		String categoryID=request.getParameter("categoryID");
+		String categoryName=request.getParameter("categoryName");
+		String categoryDescription=request.getParameter("categoryDescription");
+		Category c=categoryDAO.addCategory(categoryID, categoryName, categoryDescription);
 		mv.addObject("category", c);
 		return mv;
 

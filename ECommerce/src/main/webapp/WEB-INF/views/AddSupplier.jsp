@@ -23,7 +23,7 @@
 
 	<!--   ***************************    Nav Bar   *******************************-->
 
-<style>
+<!-- <style>
 .jumbotron {
     position: relative;
     background-image:url("resources/images/football4.jpg") center center;/*slide.jpg =>you image*/    
@@ -32,11 +32,11 @@
     background-size: cover;
     overflow: hidden;
 }
-</style>	
+</style>	 -->
 	
 	
 <body>
-<div class="jumbotron">
+<!-- <div class="jumbotron"> -->
 <div>
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -56,25 +56,25 @@
       <li><a href="index">HOME</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORY <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Category</a></li>
+          <li><a href="AddCategory">Add Category</a></li>
           <li><a href="#">View Category</a></li>
         </ul>
       </li>
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCT <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Product</a></li>
+          <li><a href="AddProduct">Add Product</a></li>
           <li><a href="#">View Product</a></li>
         </ul>
       </li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SUPPLIER <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Supplier</a></li>
+          <li><a href="AddSupplier">Add Supplier</a></li>
           <li><a href="#">View Supplier</a></li>
         </ul>
       </li>
     
     </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> LOG OUT</a></li>
+      <li><a href="index"><span class="glyphicon glyphicon-user"></span> LOG OUT</a></li>
       </ul>
 </div>
   </div>
@@ -87,7 +87,7 @@
 	<div class="row">
       <div class="col-md-7">
         <div class="well well-sm">
-          <form class="form-horizontal" action="" method="post">
+          <form class="form-horizontal" action="submit2" method="post">
           <fieldset>
             <legend class="text-center">Add Supplier</legend>
     
@@ -95,7 +95,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label text-left" for="id">Supplier ID :</label>
               <div class="col-md-8">
-                <input id="id" name="id" type="text" placeholder="Supplier ID" class="form-control">
+                <input id="supplierID" name="supplierID" type="text" placeholder="Supplier ID" class="form-control">
               </div>
             </div>
     
@@ -103,7 +103,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="name">Supplier NAME :</label>
               <div class="col-md-8">
-                <input id="name" name="name" type="text" placeholder="Supplier Name" class="form-control">
+                <input id="supplierName" name="supplierName" type="text" placeholder="Supplier Name" class="form-control">
               </div>
             </div>
     
@@ -111,14 +111,14 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="message">Supplier Description :</label>
               <div class="col-md-8">
-                <textarea class="form-control" id="message" name="message" placeholder="Enter description here..." rows="5"></textarea>
+                <textarea class="form-control" id="supplierDescription" name="supplierDescription" placeholder="Enter description here..." rows="5"></textarea>
               </div>
             </div>
     
             <!-- Form actions -->
             <div class="form-group">
               <div class="col-md-12 text-center">
-                <button id="submit" type="submit" class="btn btn-primary btn-lg ">Submit</button>
+                <button id="submit2" type="submit" class="btn btn-primary btn-lg ">Submit</button>
               </div>
             </div>
           </fieldset>
@@ -131,7 +131,6 @@
 <br>
 
 <jsp:include page="footer.jsp"></jsp:include>
-</div>
 </body>
 
 </html>

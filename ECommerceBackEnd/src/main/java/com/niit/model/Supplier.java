@@ -3,28 +3,29 @@ package com.niit.model;
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class Supplier {
 	
-	private String SupplierID;
-	private String SupplierName;
-	private String SupplierDescription;
+	private String supplierID;
+	private String supplierName;
+	private String supplierDescription;
 
 	public String getSupplierID() {
-		return SupplierID;
+		return supplierID;
 	}
 	public void setSupplierID(String supplierID) {
-		SupplierID = supplierID;
+		this.supplierID = supplierID;
 	}
 	public String getSupplierName() {
-		return SupplierName;
+		return supplierName;
 	}
 	public void setSupplierName(String supplierName) {
-		SupplierName = supplierName;
+		this.supplierName = supplierName;
 	}
 	public String getSupplierDescription() {
-		return SupplierDescription;
+		return supplierDescription;
 	}
 	public void setSupplierDescription(String supplierDescription) {
-		SupplierDescription = supplierDescription;
+		this.supplierDescription = supplierDescription;
 	}
 }

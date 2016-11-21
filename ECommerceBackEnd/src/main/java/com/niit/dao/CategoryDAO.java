@@ -1,5 +1,6 @@
 package com.niit.dao;
 
+
 import org.springframework.stereotype.Repository;
 
 import com.niit.model.Category;
@@ -8,12 +9,12 @@ import com.niit.model.Category;
 @Repository
 public class CategoryDAO {
 
-	public Category addCategory(String CategoryID ,String CategoryName,String CategoryDescription)
+	public Category addCategory(String categoryID ,String categoryName,String categoryDescription)
 	{
 		Category c =new Category();
-		c.setCategoryID(CategoryID);
-		c.setCategoryName(CategoryName);
-		c.setCategoryDescription(CategoryDescription);
+		c.setCategoryID(categoryID);
+		c.setCategoryName(categoryName);
+		c.setCategoryDescription(categoryDescription);
 	
 		return c;
 	}

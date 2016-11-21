@@ -45,25 +45,25 @@
       <li><a href="index">HOME</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORY <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Category</a></li>
+          <li><a href="AddCategory">Add Category</a></li>
           <li><a href="#">View Category</a></li>
         </ul>
       </li>
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCT <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Product</a></li>
+          <li><a href="AddProduct">Add Product</a></li>
           <li><a href="#">View Product</a></li>
         </ul>
       </li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SUPPLIER <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Add Supplier</a></li>
+          <li><a href="AddSupplier">Add Supplier</a></li>
           <li><a href="#">View Supplier</a></li>
         </ul>
       </li>
     
     </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> LOG OUT</a></li>
+      <li><a href="index"><span class="glyphicon glyphicon-user"></span> LOG OUT</a></li>
       </ul>
 </div>
   </div>
@@ -76,7 +76,7 @@
 	<div class="row">
       <div class="col-md-7">
         <div class="well well-sm">
-          <form class="form-horizontal" action="" method="post">
+          <form class="form-horizontal" action="submit" method="post">
           <fieldset>
             <legend class="text-center">Add Category</legend>
     
@@ -84,7 +84,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label text-left" for="id">Category ID :</label>
               <div class="col-md-8">
-                <input id="id" name="id" type="text" placeholder="Category ID" class="form-control">
+                <input id="categoryID" name="categoryID" type="text" placeholder="Category ID" class="form-control">
               </div>
             </div>
     
@@ -92,7 +92,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="name">Category NAME :</label>
               <div class="col-md-8">
-                <input id="name" name="name" type="text" placeholder="Category Name" class="form-control">
+                <input id="categoryName" name="categoryName" type="text" placeholder="Category Name" class="form-control">
               </div>
             </div>
     
@@ -100,7 +100,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="message">Category Description :</label>
               <div class="col-md-8">
-                <textarea class="form-control" id="message" name="message" placeholder="Enter description here..." rows="5"></textarea>
+                <textarea class="form-control" id="categoryDescription" name="categoryDescription" placeholder="Enter description here..." rows="5"></textarea>
               </div>
             </div>
     

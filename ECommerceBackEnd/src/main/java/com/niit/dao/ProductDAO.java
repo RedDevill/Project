@@ -1,5 +1,7 @@
 package com.niit.dao;
 
+
+
 import org.springframework.stereotype.Repository;
 
 import com.niit.model.Product;
@@ -8,12 +10,12 @@ import com.niit.model.Product;
 @Repository
 public class ProductDAO {
 
-	public Product addProduct(String ProductID ,String ProductName,String ProductDescription)
+	public Product addProduct(String productID ,String productName,String productDescription)
 	{
 		Product p =new Product();
-		p.setProductID(ProductID);
-		p.setProductName(ProductName);
-		p.setProductDescription(ProductDescription);
+		p.setProductID(productID);
+		p.setProductName(productName);
+		p.setProductDescription(productDescription);
 	
 		return p;
 	}

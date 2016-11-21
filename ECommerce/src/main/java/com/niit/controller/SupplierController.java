@@ -16,14 +16,14 @@ public class SupplierController {
 	@Autowired
 	SupplierDAO supplierDAO;
 
-	@RequestMapping("/submit")
-	public ModelAndView saveSignup(HttpServletRequest request){
+	@RequestMapping("/submit2")
+	public ModelAndView saveAddSupplier(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView("#");
 		
-		String SupplierID=request.getParameter("SupplierID");
-		String SupplierName=request.getParameter("SupplierName");
-		String SupplierDescription=request.getParameter("SupplierDescription");
-		Supplier s=supplierDAO.addSupplier(SupplierID, SupplierName, SupplierDescription);
+		String supplierID=request.getParameter("supplierID");
+		String supplierName=request.getParameter("supplierName");
+		String supplierDescription=request.getParameter("supplierDescription");
+		Supplier s=supplierDAO.addSupplier(supplierID, supplierName, supplierDescription);
 		mv.addObject("supplier", s);
 		return mv;
 
