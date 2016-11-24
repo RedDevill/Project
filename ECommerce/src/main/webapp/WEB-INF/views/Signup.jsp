@@ -7,8 +7,10 @@
   <title>Sign Up</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -134,11 +136,12 @@
                     <input class="form-control" name="lastname" placeholder="Last Name" type="text" required />
                 </div>
             </div>
-            <input class="form-control"  name="youremail" placeholder="Your Email" type="email" />
-            <input class="form-control" id="password" name="password" placeholder="Password" type="password" />
+            <input class="form-control"  name="email" placeholder="Your Email" type="email" />
+            <input class="form-control" id="password" name="spassword" placeholder="Password" type="password" />
             <input class="form-control" id="ReEnterPassword" name="reenterpassword" placeholder="Re-Enter Password" type="password" />
-            <label for="">
-                Birth Date</label>
+          
+            <label for="">Birth Date</label>
+            
             <div class="row">
                 <div class="col-xs-4 col-md-4">
                     <select class="form-control">
@@ -158,11 +161,11 @@
                 </div>
             </div>
             <label class="radio-inline">
-                <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
+                <input type="radio" name="gender" id="inlineCheckbox1" value="male" />
                 Male
             </label>
             <label class="radio-inline">
-                <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
+                <input type="radio" name="gender" id="inlineCheckbox2" value="female" />
                 Female
             </label>
             <br />

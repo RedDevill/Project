@@ -18,13 +18,14 @@ public class UserDAO {
 		
 	}
 	
-	public User adduser(String firstname,String lastname,String email,String spassword)
+	public User adduser(String firstname,String lastname,String email,String spassword, String gender)
 	{
 		User u =new User();
 		u.setFirstname(firstname);
 		u.setEmail(email);
 		u.setLastname(lastname);
 		u.setSpassword(spassword);
+		u.setGender(gender);
 	
 		return u;
 	}

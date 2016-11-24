@@ -1,6 +1,7 @@
 package com.niit.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,10 +22,14 @@ public class UserController {
 	
 	@RequestMapping("/login")
 	public ModelAndView validateUser(HttpServletRequest request){
-		
+		HttpSession session = request.getSession();
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
 		boolean x=userDAO.validate(username, password);
+		
+		System.out.print("Welcome "+ username);
+		session.setAttribute("sessname",username); 
+		 
 		if(x){
 			return new ModelAndView("welcome");
 		}
@@ -42,8 +47,8 @@ public class UserController {
 			String lastname=request.getParameter("lastname");
 			String email=request.getParameter("email");
 			String spassword=request.getParameter("spassword");
-			//String reenterpassword=request.getParameter("reenterpassword");
-			User u=userDAO.adduser(firstname, lastname, email,spassword);
+			String gender=request.getParameter("gender");
+			User u=userDAO.adduser(firstname, lastname, email,spassword,gender);
 			mv.addObject("user", u);
 			return mv;
 

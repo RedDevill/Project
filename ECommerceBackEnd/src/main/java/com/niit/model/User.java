@@ -12,8 +12,15 @@ public class User {
 	private String email;
 	private String spassword;
 	private String reenterpassword;
+	private String gender;
 	
 	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getReenterpassword() {
 		return reenterpassword;
 	}

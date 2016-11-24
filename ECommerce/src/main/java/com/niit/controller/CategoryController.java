@@ -18,7 +18,7 @@ public class CategoryController {
 
 	@RequestMapping("/submit")
 	public ModelAndView saveAddCategory(HttpServletRequest request){
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("ViewCategory");
 		
 		String categoryID=request.getParameter("categoryID");
 		String categoryName=request.getParameter("categoryName");

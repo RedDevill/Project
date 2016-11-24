@@ -18,7 +18,7 @@ public class SupplierController {
 
 	@RequestMapping("/submit2")
 	public ModelAndView saveAddSupplier(HttpServletRequest request){
-		ModelAndView mv = new ModelAndView("#");
+		ModelAndView mv = new ModelAndView("ViewSupplier");
 		
 		String supplierID=request.getParameter("supplierID");
 		String supplierName=request.getParameter("supplierName");

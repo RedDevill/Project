@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<%@page import="com.niit.model.User"%>
 <html lang="en">
 
 	<!--    *****************************   HEAD    ***************************  -->
@@ -65,9 +66,16 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-      <li class="dropdown">
-          <a href="index"><span class="glyphicon glyphicon-log-out"></span> Log Out</a>
-        </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><% 
+			String username=request.getParameter("username"); 
+			out.print("Welcome "+ username);
+			session.setAttribute("sessname",username); 
+			%> <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">My Account</a></li>
+          <li><a href="#"> MyCart</a></li>
+          <li><a href="index">Log Out</a></li>
+        </ul>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -201,7 +209,6 @@
 
 <br>
 <br>
-
 
 	<!--  ***********************   TRending Clubs   **********************  -->
 
