@@ -48,18 +48,18 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORY <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="AddCategory">Add Category</a></li>
-          <li><a href="#">View Category</a></li>
+          <li><a href="ViewCategory">View Category</a></li>
         </ul>
       </li>
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCT <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="AddProduct">Add Product</a></li>
-          <li><a href="#">View Product</a></li>
+          <li><a href="ViewProduct">View Product</a></li>
         </ul>
       </li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SUPPLIER <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="AddSupplier">Add Supplier</a></li>
-          <li><a href="#">View Supplier</a></li>
+          <li><a href="ViewSupplier">View Supplier</a></li>
         </ul>
       </li>
     

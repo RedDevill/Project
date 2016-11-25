@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@page isELIgnored="false" %>
 
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
-  <title>Add Supplier</title>
+  <title>myClub | Admin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,28 +17,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
-    <!-- <link rel="stylesheet" href="resources/bootstrap/css/style.css">
-    <link rel="stylesheet" href="resources/bootstrap/css/image.css">  -->
+    <link rel="stylesheet" href="resources/bootstrap/css/style.css">
+    <link rel="stylesheet" href="resources/bootstrap/css/image.css"> 
 </head>
 
 
 
 	<!--   ***************************    Nav Bar   *******************************-->
-
-<!-- <style>
-.jumbotron {
-    position: relative;
-    background-image:url("resources/images/football4.jpg") center center;/*slide.jpg =>you image*/    
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
-}
-</style>	 -->
+	
 	
 	
 <body>
-<!-- <div class="jumbotron"> -->
 <div>
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -81,56 +72,47 @@
 </nav> 
 </div>
 <br>
-<br>
-
-<div class="container"style="margin-top:80px;">
-	<div class="row">
-      <div class="col-md-7">
-        <div class="well well-sm">
-          <form class="form-horizontal" action="submit2" method="post">
-          <fieldset>
-            <legend class="text-center">Add Supplier</legend>
-    
-            <!-- ID input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label text-left" for="id">Supplier ID :</label>
-              <div class="col-md-8">
-                <input id="supplierID" name="supplierID" type="text" placeholder="Supplier ID" class="form-control">
-              </div>
-            </div>
-    
-            <!-- Name input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="name">Supplier NAME :</label>
-              <div class="col-md-8">
-                <input id="supplierName" name="supplierName" type="text" placeholder="Supplier Name" class="form-control">
-              </div>
-            </div>
-    
-            <!-- Description body -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="message">Supplier Description :</label>
-              <div class="col-md-8">
-                <textarea class="form-control" id="supplierDescription" name="supplierDescription" placeholder="Enter description here..." rows="5"></textarea>
-              </div>
-            </div>
-    
-            <!-- Form actions -->
-            <div class="form-group">
-              <div class="col-md-12 text-center">
-                <button id="submit2" type="submit" class="btn btn-primary btn-lg ">Submit</button>
-              </div>
-            </div>
-          </fieldset>
-          </form>
-        </div>
-      </div>
-	</div>
+<div class="container">
+ <div style="margin-left:0px; margin-top:100px;">
+<h1 style="color: #292c2f"><dt>Product</dt></h1>
 </div>
 <br>
 <br>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Quantity</th>
+        <th>Brand</th>
+        <th>Price</th>
+        <th>Supplier</th>
+        <th>Category</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>${product.productID}</td>
+        <td>${product.productName}</td>
+        <td>${product.productDescription}</td>
+        <td>${product.quantity}</td>
+        <td>${product.brand}</td>
+        <td>${product.price}</td>
+        <td>${product.supplier}</td>
+        <td>${product.category}</td>
+        <td><a>Edit</a></td>
+        <td><a>Delete</a></td>
+      </tr>
+          </tbody>
+  </table>
+</div>
 
+<br>
+<br>
 <jsp:include page="footer.jsp"></jsp:include>
-</body>
 
+</body>
 </html>

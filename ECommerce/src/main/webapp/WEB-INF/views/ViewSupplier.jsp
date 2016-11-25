@@ -45,16 +45,16 @@
        <div id="navbar1" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
       <li><a href="index">HOME</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORY <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="AddSupplier">Add Category</a></li>
+          <li><a href="AddCategory">Add Category</a></li>
           <li><a href="ViewCategory">View Category</a></li>
         </ul>
       </li>
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCT <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="AddProduct">Add Product</a></li>
-          <li><a href="#">View Product</a></li>
+          <li><a href="ViewProduct">View Product</a></li>
         </ul>
       </li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SUPPLIER <span class="caret"></span></a>
         <ul class="dropdown-menu">

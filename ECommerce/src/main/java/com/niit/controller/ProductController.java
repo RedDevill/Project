@@ -18,12 +18,17 @@ public class ProductController {
 
 	@RequestMapping("/submit1")
 	public ModelAndView saveAddProduct(HttpServletRequest request){
-		ModelAndView mv = new ModelAndView("#");
+		ModelAndView mv = new ModelAndView("ViewProduct");
 		
 		String productID=request.getParameter("productID");
 		String productName=request.getParameter("productName");
 		String productDescription=request.getParameter("productDescription");
-		Product p=productDAO.addProduct(productID, productName, productDescription);
+		String quantity =request.getParameter("quantity");
+		String brand= request.getParameter("brand");
+		String price= request.getParameter("price");
+		String supplier=request.getParameter("supplier");
+		String category= request.getParameter("category");
+		Product p=productDAO.addProduct(productID, productName, productDescription, quantity, brand, price, supplier, category);
 		mv.addObject("product", p);
 		return mv;
 

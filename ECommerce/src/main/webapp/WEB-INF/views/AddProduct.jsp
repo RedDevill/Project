@@ -47,18 +47,18 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORY <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="AddCategory">Add Category</a></li>
-          <li><a href="#">View Category</a></li>
+          <li><a href="ViewCategory">View Category</a></li>
         </ul>
       </li>
      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCT <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="AddProduct">Add Product</a></li>
-          <li><a href="#">View Product</a></li>
+          <li><a href="ViewProduct">View Product</a></li>
         </ul>
       </li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SUPPLIER <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="AddSupplier">Add Supplier</a></li>
-          <li><a href="#">View Supplier</a></li>
+          <li><a href="ViewSupplier">View Supplier</a></li>
         </ul>
       </li>
     
@@ -118,7 +118,8 @@
               <label class="col-md-5 control-label text-left" for="id">Supplier :</label>
               <div class="col-md-3">
                 <!-- <input id="supplier" name="supplier" type="text" placeholder="Product ID" class="form-control"> -->
-            		<select class="form-control">
+            		<select class="form-control" name="supplier">
+            			<option value="Puma">Supplier</option>
                         <option value="Puma">Puma</option>
                         <option value="Adidas">Adidas</option>
                         <option value="Nike">Nike</option>
@@ -129,7 +130,8 @@
               <label class="col-md-5 control-label text-left" for="id">Category :</label>
               <div class="col-md-3">
                 <!-- <input id="supplier" name="supplier" type="text" placeholder="Product ID" class="form-control"> -->
-            		<select class="form-control">
+            		<select class="form-control" name="category">
+            			<option value="Puma">Category</option>
                         <option value="Shirt">Shirt</option>
                         <option value="Shorts">Shorts</option>
                         <option value="Shoes">Shoes</option>

@@ -73,6 +73,13 @@ public class HomeController {
 		return mv;
 	}
 	
+	@RequestMapping("ViewProduct")
+	public ModelAndView ViewProduct()
+	{
+		ModelAndView mv=new ModelAndView("ViewProduct");
+		return mv;
+	}
+	
 	@RequestMapping("AddSupplier")
 	public ModelAndView AddSupplier()
 	{

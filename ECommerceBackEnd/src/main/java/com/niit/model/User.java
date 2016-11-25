@@ -1,19 +1,39 @@
 package com.niit.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import org.springframework.stereotype.Component;
 
+
 @Component
+@Entity
 public class User {
-	
-	private String username;
+	@Id
+	private String susername;
 	private String password;
+	private String username;
 	private String firstname;
 	private String lastname;
 	private String email;
 	private String spassword;
 	private String reenterpassword;
+	private String dateofbirth;
 	private String gender;
 	
+	
+	public String getSusername() {
+		return susername;
+	}
+	public void setSusername(String susername) {
+		this.susername = susername;
+	}
+	public String getDateofbirth() {
+		return dateofbirth;
+	}
+	public void setDateofbirth(String dateofbirth) {
+		this.dateofbirth = dateofbirth;
+	}
 	
 	public String getGender() {
 		return gender;

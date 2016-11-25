@@ -11,6 +11,13 @@
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
 
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+
+
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,6 +40,14 @@
         }
         return true;
     }
+</script>
+
+<script type='text/javascript'>
+$(function(){
+$('dateofbirth').datepicker({
+});
+});
+
 </script>
 </head>
 
@@ -127,6 +142,7 @@
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
             <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
             <form action="SignUP" method="post" class="form" role="form">
+            <input class="form-control"  name="susername" placeholder="User Name" type="text" />
             <div class="row">
                 <div class="col-xs-6 col-md-6">
                     <input class="form-control" name="firstname" placeholder="First Name" type="text"
@@ -139,10 +155,14 @@
             <input class="form-control"  name="email" placeholder="Your Email" type="email" />
             <input class="form-control" id="password" name="spassword" placeholder="Password" type="password" />
             <input class="form-control" id="ReEnterPassword" name="reenterpassword" placeholder="Re-Enter Password" type="password" />
-          
-            <label for="">Birth Date</label>
+          	<br>
+            <label for="">Date of Birth</label>
+            <br>
+        	<div class="col-sm-8 input-group date">
+          	<input type="text" class="form-control inputstl" id="dateofbirth" name="dateofbirth" placeholder="Enter Date"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+         	</div>
             
-            <div class="row">
+           <!--  <div class="row">
                 <div class="col-xs-4 col-md-4">
                     <select class="form-control">
                         <option value="Month">Month</option>
@@ -159,7 +179,9 @@
                         <option value="Year">Year</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
+            <br>
+            <label for="">Gender :</label>
             <label class="radio-inline">
                 <input type="radio" name="gender" id="inlineCheckbox1" value="male" />
                 Male

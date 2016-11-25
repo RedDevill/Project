@@ -44,7 +44,8 @@
         <th>Lastname</th>
         <th>Email</th>
         <th>Password</th>
-        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>Gender</th> 
       </tr>
     </thead>
     <tbody>
@@ -53,6 +54,7 @@
         <td>${user.lastname}</td>
         <td>${user.email}</td>
         <td>${user.spassword}</td>
+        <td>${user.dateofbirth}</td>
         <td>${user.gender}</td>
       </tr>
           </tbody>

@@ -42,13 +42,22 @@ public class UserController {
 	@RequestMapping("/SignUP")
 		public ModelAndView saveSignup(HttpServletRequest request){
 			ModelAndView mv = new ModelAndView("wregistration");
-			
+			User u=new User();
+			String susername=request.getParameter("susername");
 			String firstname=request.getParameter("firstname");
 			String lastname=request.getParameter("lastname");
 			String email=request.getParameter("email");
 			String spassword=request.getParameter("spassword");
+			String dateofbirth=request.getParameter("dateofbirth");
 			String gender=request.getParameter("gender");
-			User u=userDAO.adduser(firstname, lastname, email,spassword,gender);
+			u.setSusername(susername);
+			u.setFirstname(firstname);
+			u.setLastname(lastname);
+			u.setEmail(email);
+			u.setSpassword(spassword);
+			u.setDateofbirth(dateofbirth);
+			u.setGender(gender);
+			userDAO.addUser(u);
 			mv.addObject("user", u);
 			return mv;
 
