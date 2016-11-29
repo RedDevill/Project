@@ -40,6 +40,7 @@
   <table class="table table-hover">
     <thead>
       <tr>
+      	<th>Username</th>
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Email</th>
@@ -50,10 +51,11 @@
     </thead>
     <tbody>
       <tr>
+      	<td>${user.username}</td>
         <td>${user.firstname}</td>
         <td>${user.lastname}</td>
         <td>${user.email}</td>
-        <td>${user.spassword}</td>
+        <td>${user.password}</td>
         <td>${user.dateofbirth}</td>
         <td>${user.gender}</td>
       </tr>

@@ -17,7 +17,14 @@
     <link rel="stylesheet" href="resources/bootstrap/css/image.css">
 
 
-
+ <style>
+  html,body {
+	height:100%;
+    background:center no-repeat fixed url('http://i263.photobucket.com/albums/ii136/oDowd54/wallpaper38_1024.jpg');
+    background-size: cover;
+  
+} 
+  </style>
 </head>
 
 
@@ -38,6 +45,8 @@
   
     
 <div id="myCarousel" class="carousel slide sidenav" data-ride="carousel">
+<br>
+<br>
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -74,6 +83,14 @@
 
     <div class="item">
       <img src="resources/images/umbro.jpg" alt="Umbro"class="img-responsive" >
+      <div class="carousel-caption">
+        <h3>Umbro</h3>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="resources/images/football3.jpg" alt="Umbro"class="img-responsive" >
       <div class="carousel-caption">
         <h3>Umbro</h3>
         <p></p>
@@ -117,7 +134,7 @@
 				  
 			</div>   
 </div>       
-
+<br>
 
 <div class="banner-hold-main img1 ">
             <div class="banner-img-content">
@@ -136,9 +153,9 @@
 				</div>
 </div>
            
+<br>
 
-
-<div class="banner-hold-main img1">
+<div class="banner-hold-main img1" style="margin-top:550px;">
             <div class="banner-img-content">
                <div class="banner-content content-left" style="top:40%;max-width: 1200px;">
                   <h2 class="faster-headline headline" style="color: white; font-family:"primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">FOR</h2>
@@ -153,15 +170,12 @@
 				  <img src="resources/images/Basketball3.jpg" class="img-responsive" alt="fierce">
 			</div>
 </div>
-<br>
 
-<br>
-<br>
 
 
 	<!--  ***********************   TRending Clubs   **********************  -->
-
-<div>
+<br>
+<div style="margin-top:500px;">
   <h2 class="text-center"><dt>Trending Clubs</dt></h2><br>
   <br><div class="row">
     <div class="col-md-3"style="margin-left:200px;" >

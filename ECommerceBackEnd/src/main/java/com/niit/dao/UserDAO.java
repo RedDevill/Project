@@ -4,10 +4,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.model.User;
 
 @Repository
+@Transactional
+@EnableTransactionManagement
 public class UserDAO {
 	
 	@Autowired
@@ -43,7 +47,7 @@ public class UserDAO {
 		return u;
 	}*/
 	
-	
+	@Transactional
 	public void addUser(User u)
 	{
 		Session sess=getSession();

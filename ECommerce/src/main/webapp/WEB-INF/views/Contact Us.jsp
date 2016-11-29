@@ -16,6 +16,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
+     <!-- <link rel="stylesheet" href="resources/bootstrap/css/Signup.css"> -->
+   
+  <style>
+  html,body {
+	height:100%;
+    background:center no-repeat fixed url('https://megazoune.files.wordpress.com/2013/07/van-persie-1.jpg');
+    background-size: cover;
+   /*  color:#444;
+    font-family: 'Lato', sans-serif; */
+} 
+  </style>
    
 </head>
 
@@ -108,7 +119,7 @@
   <br>
 <br>
 <br>
-<div class="container">
+<div class="container" style="margin-top:70px;">
 	<div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="well well-sm">

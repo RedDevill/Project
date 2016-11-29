@@ -103,8 +103,8 @@
         <td>${product.price}</td>
         <td>${product.supplier}</td>
         <td>${product.category}</td>
-        <td><a>Edit</a></td>
-        <td><a>Delete</a></td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
       </tr>
           </tbody>
   </table>

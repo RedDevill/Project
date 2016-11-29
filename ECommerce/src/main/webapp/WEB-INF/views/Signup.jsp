@@ -49,6 +49,18 @@ $('dateofbirth').datepicker({
 });
 
 </script>
+<style type="text/css">
+html,body {
+	
+	height:110%;
+    background:center no-repeat fixed url('http://wall.rimbuz.com/wp-content/uploads/Nike-Soccer-Widescreen-Desktop-Wallpapers.jpg');
+    background-size: cover;
+   /*  color:#444;
+    font-family: 'Lato', sans-serif; */
+}
+
+</style>
+
 </head>
 
 
@@ -135,14 +147,13 @@ $('dateofbirth').datepicker({
   </div><!-- /.container-fluid -->
 </nav>
 <br>
-<br>
-<div style="background-img:url(football4.jpg);">
-<div class="container"style="margin-top:70px;">
+
+<div class="container"style="margin-top:100px;">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
             <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
             <form action="SignUP" method="post" class="form" role="form">
-            <input class="form-control"  name="susername" placeholder="User Name" type="text" />
+            <input class="form-control"  name="username" placeholder="User Name" type="text" />
             <div class="row">
                 <div class="col-xs-6 col-md-6">
                     <input class="form-control" name="firstname" placeholder="First Name" type="text"
@@ -153,7 +164,7 @@ $('dateofbirth').datepicker({
                 </div>
             </div>
             <input class="form-control"  name="email" placeholder="Your Email" type="email" />
-            <input class="form-control" id="password" name="spassword" placeholder="Password" type="password" />
+            <input class="form-control" id="password" name="password" placeholder="Password" type="password" />
             <input class="form-control" id="ReEnterPassword" name="reenterpassword" placeholder="Re-Enter Password" type="password" />
           	<br>
             <label for="">Date of Birth</label>
@@ -162,24 +173,6 @@ $('dateofbirth').datepicker({
           	<input type="text" class="form-control inputstl" id="dateofbirth" name="dateofbirth" placeholder="Enter Date"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
          	</div>
             
-           <!--  <div class="row">
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Month">Month</option>
-                        
-                    </select>
-                </div>
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Day">Day</option>
-                    </select>
-                </div>
-                <div class="col-xs-4 col-md-4">
-                    <select class="form-control">
-                        <option value="Year">Year</option>
-                    </select>
-                </div>
-            </div> -->
             <br>
             <label for="">Gender :</label>
             <label class="radio-inline">
@@ -195,11 +188,10 @@ $('dateofbirth').datepicker({
             <button id="SignUP" class="btn btn-lg btn-primary btn-block" type="submit" onclick="return Validate()">Sign Up
              </button>
             </form>
-        </div>
-        
+        </div>    
     </div>
     </div>
-    </div>
+    <br>
     <jsp:include page="footer.jsp"></jsp:include>
     </body>
     </html>

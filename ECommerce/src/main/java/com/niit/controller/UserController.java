@@ -43,18 +43,18 @@ public class UserController {
 		public ModelAndView saveSignup(HttpServletRequest request){
 			ModelAndView mv = new ModelAndView("wregistration");
 			User u=new User();
-			String susername=request.getParameter("susername");
+			String username=request.getParameter("username");
 			String firstname=request.getParameter("firstname");
 			String lastname=request.getParameter("lastname");
 			String email=request.getParameter("email");
-			String spassword=request.getParameter("spassword");
+			String password=request.getParameter("password");
 			String dateofbirth=request.getParameter("dateofbirth");
 			String gender=request.getParameter("gender");
-			u.setSusername(susername);
+			u.setUsername(username);
 			u.setFirstname(firstname);
 			u.setLastname(lastname);
 			u.setEmail(email);
-			u.setSpassword(spassword);
+			u.setPassword(password);
 			u.setDateofbirth(dateofbirth);
 			u.setGender(gender);
 			userDAO.addUser(u);

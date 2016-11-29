@@ -89,8 +89,8 @@
         <td>${category.categoryID}</td>
         <td>${category.categoryName}</td>
         <td>${category.categoryDescription}</td>
-        <td><a>Edit</a></td>
-        <td><a>Delete</a></td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
       </tr>
           </tbody>
   </table>

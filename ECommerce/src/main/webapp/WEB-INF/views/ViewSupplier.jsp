@@ -93,8 +93,8 @@
         <td>${supplier.supplierID}</td>
         <td>${supplier.supplierName}</td>
         <td>${supplier.supplierDescription}</td>
-        <td><a>Edit</a></td>
-        <td><a>Delete</a></td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
       </tr>
           </tbody>
   </table>

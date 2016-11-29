@@ -10,24 +10,17 @@ import org.springframework.stereotype.Component;
 @Entity
 public class User {
 	@Id
-	private String susername;
-	private String password;
+	
 	private String username;
 	private String firstname;
 	private String lastname;
+	private String password;
 	private String email;
-	private String spassword;
-	private String reenterpassword;
 	private String dateofbirth;
 	private String gender;
 	
 	
-	public String getSusername() {
-		return susername;
-	}
-	public void setSusername(String susername) {
-		this.susername = susername;
-	}
+	
 	public String getDateofbirth() {
 		return dateofbirth;
 	}
@@ -41,17 +34,6 @@ public class User {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getReenterpassword() {
-		return reenterpassword;
-	}
-	public void setReenterpassword(String reenterpassword) {
-		this.reenterpassword = reenterpassword;
-	}
-	public void setSpassword(String spassword) {
-		this.spassword = spassword;
-	}
-	
-	
 	public String getUsername() {
 		return username;
 	}
@@ -82,9 +64,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getSpassword() {
-		return spassword;
-	}
+	
 	
 	
 	

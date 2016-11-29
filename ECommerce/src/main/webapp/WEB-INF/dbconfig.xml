@@ -25,7 +25,7 @@
    			<props>
    			<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
    			<prop key="hibernate.show_sql">true</prop>
-   			<prop key="hibernate.hbm2ddl.auto">update</prop>
+   			<prop key="hibernate.hbm2ddl.auto">create</prop>
    			</props>   			
    </property>   
    
@@ -34,5 +34,9 @@
    				<value>com.niit.model</value>
    		</array>
    </property>
+   </bean>
+   
+   <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+   <property name="sessionFactory" ref="sessionFactory"></property>	
    </bean>
    </beans>

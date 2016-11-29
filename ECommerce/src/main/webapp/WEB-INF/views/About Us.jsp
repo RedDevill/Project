@@ -18,6 +18,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
     <link rel="stylesheet" href="resources/bootstrap/css/style.css">
     <link rel="stylesheet" href="resources/bootstrap/css/image.css">
+    
+    
+    <style>
+  html,body {
+	height:100%;
+    background:center no-repeat fixed url('http://i263.photobucket.com/albums/ii136/oDowd54/wallpaper38_1024.jpg');
+    background-size: cover;
+  
+} 
+  </style>
+  
 </head>
 
 
