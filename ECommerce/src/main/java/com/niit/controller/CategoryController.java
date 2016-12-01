@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.dao.CategoryDAO;
 import com.niit.model.Category;
+import com.niit.model.User;
 
 @Controller
 public class CategoryController {
@@ -19,11 +20,14 @@ public class CategoryController {
 	@RequestMapping("/submit")
 	public ModelAndView saveAddCategory(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView("ViewCategory");
-		
+		Category c=new Category();
 		String categoryID=request.getParameter("categoryID");
 		String categoryName=request.getParameter("categoryName");
 		String categoryDescription=request.getParameter("categoryDescription");
-		Category c=categoryDAO.addCategory(categoryID, categoryName, categoryDescription);
+		c.setCategoryID(categoryID);
+		c.setCategoryName(categoryName);
+		c.setCategoryDescription(categoryDescription);
+		categoryDAO.addCategory(c);
 		mv.addObject("category", c);
 		return mv;
 

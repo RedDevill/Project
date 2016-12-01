@@ -1,11 +1,14 @@
 package com.niit.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import org.springframework.stereotype.Component;
 
 @Component
-
+@Entity
 public class Supplier {
-	
+	@Id
 	private String supplierID;
 	private String supplierName;
 	private String supplierDescription;

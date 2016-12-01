@@ -19,11 +19,14 @@ public class SupplierController {
 	@RequestMapping("/submit2")
 	public ModelAndView saveAddSupplier(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView("ViewSupplier");
-		
+		Supplier s= new Supplier();
 		String supplierID=request.getParameter("supplierID");
 		String supplierName=request.getParameter("supplierName");
 		String supplierDescription=request.getParameter("supplierDescription");
-		Supplier s=supplierDAO.addSupplier(supplierID, supplierName, supplierDescription);
+		s.setSupplierID(supplierID);
+		s.setSupplierName(supplierName);
+		s.setSupplierDescription(supplierDescription);
+		supplierDAO.addSupplier(s);
 		mv.addObject("supplier", s);
 		return mv;
 

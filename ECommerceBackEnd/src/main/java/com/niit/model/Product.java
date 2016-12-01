@@ -1,10 +1,14 @@
 package com.niit.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
 public class Product {
-	
+	@Id
 	private String productID;
 	private String productName;
 	private String productDescription;
