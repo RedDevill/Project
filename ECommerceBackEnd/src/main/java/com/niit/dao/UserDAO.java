@@ -1,7 +1,11 @@
 package com.niit.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -25,13 +29,24 @@ public class UserDAO {
 
 	
 	public boolean validate(String username, String password){
-		if(username.equals("harsh")&& password.equals("123")){
-			return true;
-		}
-		else{
-			return false;
-		}
+		Session sess=getSession();
+	    Transaction tx=sess.beginTransaction();
+		boolean flag= false;
+		String hql="Select username,password from User where username=:username and password=:password";
+		Query q = sess.createQuery(hql);
+		q.setParameter("username", username);
+		q.setParameter("password", password);
 		
+		System.out.println("username is:"+username+" and password is"+password);
+		List<User> l= (List<User>)q.list();
+			if(l.size()>0)
+			{ 
+				System.out.println("list is "+l);
+				flag= true;
+			
+			}
+		tx.commit();	
+		return flag;
 	}
 	
 	/*public User adduser(String firstname,String lastname,String email,String spassword,String dateofbirth, String gender)
@@ -56,7 +71,5 @@ public class UserDAO {
 		tx.commit();
 		sess.close();
 	}
-	
-	
-	
+
 }

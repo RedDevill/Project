@@ -74,7 +74,7 @@
         <ul class="dropdown-menu">
           <li><a href="#">My Account</a></li>
           <li><a href="#"> MyCart</a></li>
-          <li><a href="index">Log Out</a></li>
+          <li><a href="logout">Log Out</a></li>
         </ul>
       </ul>
     </div><!-- /.navbar-collapse -->

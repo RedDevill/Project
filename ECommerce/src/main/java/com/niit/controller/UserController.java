@@ -31,13 +31,22 @@ public class UserController {
 		session.setAttribute("sessname",username); 
 		 
 		if(x){
+			System.out.println("welcome page");
 			return new ModelAndView("welcome");
 		}
 		else{
+			System.out.println("error page");
 			return new ModelAndView("Error");
 		}
 		
 	}
+	
+	@RequestMapping("/logout")
+    public String logout(HttpSession session ) {
+	   session.setAttribute("sessname", null);
+       session.invalidate();
+       return "redirect:/";
+    }
 	
 	@RequestMapping("/SignUP")
 		public ModelAndView saveSignup(HttpServletRequest request){
