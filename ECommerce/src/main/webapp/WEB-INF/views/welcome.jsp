@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<%@page import="com.niit.model.User"%>
+<%-- <%@page import="com.niit.model.User"%> --%>
 <html lang="en">
 
 	<!--    *****************************   HEAD    ***************************  -->
@@ -19,8 +19,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
-    <link rel="stylesheet" href="resources/bootstrap/css/style.css">
-    <link rel="stylesheet" href="resources/bootstrap/css/image.css">
+   
+    <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
+    <link rel="stylesheet" href="resources/bootstrap/css1/styles.css">
+    <link rel="stylesheet" href="resources/bootstrap/css1/image.css">
 
 </head>
 
@@ -33,258 +35,506 @@
 <body>
 	
 <body>
- <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-       <!-- <img src="resources/images/logo.jpg" alt="myClub"> -->
-       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
-          <!-- span class="sr-only">Toggle navigation</span-->
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-         <a class="navbar-brand" href="index"> <img src="resources/images/logo.jpg" alt="myClub"></a>
+
+    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-danger" href="#"><img src="resources/images/myclub-logo2.png" alt="myClub"></a>
         </div>
-        
-       <div id="navbar1" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index">HOME</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SHOP <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">MEN's</a></li>
-          <li><a href="#">WOMEN's</a></li>
-          <li><a href="#">KIDS</a></li>
-        </ul>
-      </li>
-      <li><a href="#">BRANDS</a></li>
-      <li><a href="About Us">ABOUT US</a></li>
-    </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+        <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="index">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="About Us">About Us</a></li>
+                <!-- <li><a href="#section4"></a></li>
+                <li><a href="#section5"></a></li>
+                <li><a href="#section6"></a></li> -->
+                <li>&nbsp;</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+           	 <form class="navbar-form navbar-left" role="search">
+        		<div class="form-group">
+          		<input type="text" class="form-control" placeholder="Search">
+        		</div>
+        		<button type="submit" class="btn btn-danger btn-default">Submit</button>
+      		</form>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <% 	String username=request.getParameter("username"); 
+					out.print("Welcome "+ username);
+					session.setAttribute("sessname",username); 
+				%> <span style="color:#1abc9c" class="glyphicon glyphicon-triangle-bottom"></span></a>
+        			<ul class="dropdown-menu">
+          				<li><a href="#">My Account</a></li>
+          				<li><a href="#"> MyCart</a></li>
+          				<li><a href="index">Log Out</a></li>
+        			</ul>
+                </li>
+            </ul>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><% 
-			String username=request.getParameter("username"); 
-			out.print("Welcome "+ username);
-			session.setAttribute("sessname",username); 
-			%> <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">My Account</a></li>
-          <li><a href="#"> MyCart</a></li>
-          <li><a href="logout">Log Out</a></li>
-        </ul>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
 </nav>
-  
-  
-  
-  
+
+ 
   <!--  *********************  Carousel section  ***************************  -->
     
-  
-  
-    
-<div id="myCarousel" class="carousel slide sidenav" data-ride="carousel">
+<section class="container-fluid" id="section1">
+
+  <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+    <li data-target="#bs-carousel" data-slide-to="3"></li>
+     <li data-target="#bs-carousel" data-slide-to="4"></li>
   </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="resources/images/adidas.jpg" alt="Adidas" class="img-responsive">
-      <div class="carousel-caption">
-        <h3>Adidas</h3>
-        <p></p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="resources/images/puma.jpg" alt="Puma" class="img-responsive">
-      <div class="carousel-caption">
-        <h3>Puma</h3>
-        <p></p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="resources/images/nike.jpg" alt="Nike" class="img-responsive">
-      <div class="carousel-caption">
-        <h3>Nike</h3>
-        <p></p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="resources/images/umbro.jpg" alt="Umbro"class="img-responsive" >
-      <div class="carousel-caption">
-        <h3>Umbro</h3>
-        <p></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
   
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<br>
-
-<video src="#"></video>
-
-
-		<!--   ************************  Shop section   **************************** -->
-		
-
-<div class="banner-hold-main  ">
-            <div class="banner-img-content center">
-             <img src="resources/images/football3.jpg" class="img-responsive"  alt="fierce"> 
-               <div class="banner-content content-left" style="top:40%;max-width: 1200px;">
+  <!-- Wrapper for slides -->
+   
+  <div class="carousel-inner" role="listbox">
+  	 <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+            <h1><%out.print("Welcome "+ username); %>  to </h1>
+            <br>        
+            <h3>Your one stop for all your sports clubs needs</h3>
+            <br>
+        </hgroup>
+        <a href="#section2" class="btn btn-hero btn-lg btn-huge " data-toggle="" data-target="#section2">Shop Now</a>
+      </div>
+    </div>
+    
+    <div class="item slides ">
+    <img  style="width:1260px"; src="resources/images/football4.jpg">
+      <div class="slide-2"></div>
+      			<div class="banner-content content-left">
+      			<br>
+      			<br>
                   <h2 class="faster-headline headline" style="color: white; font-family: " primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">FOR</h2>
   				  <h3 class="faster-headline headline" style="color: white; font-family: " primary-bold" ,arial,"helvetica="" neue",helvetica,sans-serif="" !important;"=""><u ffcolor="gold">FOOTBALL</u></h3>
+  				  <br>
                   <h4 class="subheadline sale-banner-font-set" style="color: white; text-transform: none !important; line-height: 24px !important; font-size: 40px; letter-spacing: 1px;">FANS</h4>
-               
-                  <p class="angle-banner-p turn-it" style="color: white;font-size: 16px;"></p>
-                  <div class="btns desktop-tabs" style="margin-bottom: -11%;">
-                  <a class="sign"  href="#">SHOP FOOTBALL KITS</a>
-                  </div>
+               <button class="btn btn-danger btn-lg btn-responsive" role="button">Shop Football kits</button>
                </div>
-				  
-			</div>   
-</div>       
-
-
-<div class="banner-hold-main img1 ">
-            <div class="banner-img-content">
-               <div class="banner-content content-right" style="top:40%;max-width: 1300px;">
-                  <h2 class="faster-headline headline" style ="color: white; font-family: " primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">FOR</h2>
-  				  <h3 class="faster-headline headline" style="color: white; font-family: " primary-bold" ,arial,"helvetica="" neue",helvetica,sans-serif="" !important;"=""><u ffcolor="gold">CRICKET</u></h3>
-                  <h4 class="subheadline sale-banner-font-set" style="color: white; text-transform: none !important; line-height: 24px !important; font-size: 40px; letter-spacing: 1px;">LOVER</h4>
-               
-                  <p class="angle-banner-p turn-it" style="color: white;font-size: 16px;"></p>
-                  <div class="btns desktop-tabs" style="margin-bottom: -11%;">
-                  <a class="sign"  href="#">SHOP CRICKET KITS</a>
-                  </div>
-               </div>
-                  <img src="resources/images/cricket3.jpg" class="img-responsive" alt="fierce"> 
-				<!-- <style="padding-left:150px;  padding-right:150px; height:450px; width:6000px;"-->
-				</div>
-</div>
-           
-
-
-<div class="banner-hold-main img1">
-            <div class="banner-img-content">
-               <div class="banner-content content-left" style="top:40%;max-width: 1200px;">
+    </div>
+    <div class="item slides ">
+    <img src="resources/images/cricket3.jpg">
+      <div class="slide-3"></div>
+      <div class="banner-content content-right">
+      			<br>
+      			<br>
                   <h2 class="faster-headline headline" style="color: white; font-family: " primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">FOR</h2>
-  			   	  <h3 class="faster-headline headline" style="color: white; font-family: " primary-bold" ,arial,"helvetica="" neue",helvetica,sans-serif="" !important;"=""><u ffcolor="gold">BASKETBALL</u></h3>
+  				  <h3 class="faster-headline headline" style="color: white; font-family: " primary-bold" ,arial,"helvetica="" neue",helvetica,sans-serif="" !important;"=""><u ffcolor="red">CRICKET</u></h3>
+  				  <br>
+                  <h4 class="subheadline sale-banner-font-set" style="color: white; text-transform: none !important; line-height: 24px !important; font-size: 40px; letter-spacing: 1px;">LOVERS</h4>      
+        <button class="btn btn-danger btn-lg" role="button">Shop Cricket kits</button>
+      </div>
+    </div>
+    <div class="item slides">
+    <img src="resources/images/Basketball3.jpg">
+      <div class="slide-4"></div>
+      <div class="banner-content content-left">
+      			<br>
+      			<br>
+                  <h2 class="faster-headline headline" style="color: white; font-family: " primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">FOR</h2>
+  				  <h3 class="faster-headline headline" style="color: white; font-family: " primary-bold" ,arial,"helvetica="" neue",helvetica,sans-serif="" !important;"=""><u ffcolor="gold">BASKETBALL</u></h3>
+  				  <br>
                   <h4 class="subheadline sale-banner-font-set" style="color: white; text-transform: none !important; line-height: 24px !important; font-size: 40px; letter-spacing: 1px;">JAM</h4>
+               <button class="btn btn-danger btn-lg" role="button">Shop Basketball kits</button>
                
-                  <p class="angle-banner-p turn-it" style="color: white;font-size: 16px;"></p>
-                  <div class="btns desktop-tabs" style="margin-bottom: -11%;">
-                  <a class="sign"  href="#">SHOP BASKETBALL KITS</a>
-                  </div>
-               </div>
-				  <img src="resources/images/Basketball3.jpg" class="img-responsive" alt="fierce">
+      </div>
+    </div>
+    <div class="item slides">
+    <img src="resources/images/running2.jpg" style="opacity:0.9;">
+      <div class="slide-5"></div>
+      <div class="banner-content content-left">
+      			<br>
+      			<br>
+      			<br>
+      			<br>
+                  <h2 class="faster-headline headline" style="color: white; font-family: " primary-bold",arial,"helvetica="" neue",helvetica,sans-serif="" !important;"="">START</h2>
+  				  <h3 class="faster-headline headline" style="color: white; font-family: " primary-bold" ,arial,"helvetica="" neue",helvetica,sans-serif="" !important;"=""><u ffcolor="gold">RUNNING</u></h3>
+  				  <br>
+                  <h4 class="subheadline sale-banner-font-set" style="color: white; text-transform: none !important; line-height: 24px !important; font-size: 40px; letter-spacing: 1px;">NOW</h4>
+               <button class="btn btn-danger btn-lg" role="button">Shop Now</button>
+               
+      </div>
+    </div>
+  </div> 
+  <!-- Left and right controls -->
+ 
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="" aria-hidden="true"></span>
+    
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="" aria-hidden="true"></span>
+  </a>
+</div>
+    
+</section>
+
+<section class="container-fluid" id="section2">
+<h2 class="text-center">Shop myClub</h2>
+<br>
+    <div class="container v-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInLeft animate">
+                            <div class="panel-heading">
+                                <h3>MENS</h3></div>
+                            <div class="panel-body">
+                                 <img src="resources/images/mens.jpg" class="img-circle center-block img-responsive"alt="MEN's" style="width:200px;height:200px">
+        						<br>  						
+        						<a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInUp animate">
+                            <div class="panel-heading">
+                                <h3>WOMENS</h3></div>
+                            <div class="panel-body">
+                                <img src="resources/images/womens.jpg" class="img-circle center-block img-responsive" alt="WOMEN's" style="width:200px;height:200px">
+        						<br>
+        						<a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
+                               	<hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="panel panel-default slideInRight animate">
+                            <div class="panel-heading">
+                                <h3>KIDS</h3></div>
+                            <div class="panel-body">
+                                <img src="resources/images/kids.jpg" class="img-circle center-block img-responsive" alt="KIDs" style="width:200px;height:200px">
+                                <br>
+                                <a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/row-->
+        <div class="row">
+            <br>
+        </div>
+    </div>
+    <!--/container-->
+</section>
+
+<section id="section10" >
+    <div class="container-fluid v-center">
+    <h1 class="text-center lato"style="color:white">BY BRANDS</h1>
+        <br>
+        <br>
+        <div class="row">
+        <br>
+            <div class="col-sm-2 col-sm-offset-2 col-xs-6">
+                <div class="text-center">
+                    <a href="">
+                        <img style="width:150px;height:150px" class="img-circle center-block img-responsive img-thumbnail" src="resources/images/puma1.jpg">
+                    </a>
+                    <h2 class="text-center lato" style="color:#f44d3c">PUMA</h2>
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-6">
+                <div class="text-center">
+                    <a href="">
+                        <img style="width:150px;height:150px" class="img-circle center-block img-responsive img-thumbnail" src="resources/images/adidas1.jpg">
+                    </a>
+                    <h2 class="text-center lato"style="color:#f44d3c">ADIDAS</h2>
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-6">
+                <div class="text-center">
+                    <a href="">
+                        <img style="width:150px;height:150px" class="img-circle img-responsive img-thumbnail" src="resources/images/nike1.jpg">
+                    </a>
+                    <h2 class="text-center lato"style="color:#f44d3c">NIKE</h2>
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-6">
+                <div class="text-center">
+                    <a href="">
+                        <img style="width:150px;height:150px" class="img-circle img-responsive img-thumbnail" src="resources/images/reebok.png">
+                    </a>
+                    <h2 class="text-center lato"style="color:#f44d3c">REEBOK</h2>
+                </div>
+            </div>
+        </div>
+        
+        <!--/row-->
+    </div>
+</section>
+
+<section class="container-fluid" id="section5">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <h2 class="text-center lato">Some Famous and Trending clubs.</h2>
+            <hr>
+            <div class="media">
+                <h3>Man Utd FC</h3>
+                <div class="media-left">
+                    <img style="width:100px;height:100px" src="resources/images/manutd1.png">
+                </div>
+                <div class="media-body media-middle">
+                    <p><a href="#" style="margin-left:100px" class="btn btn-danger btn-responsive btn-lg btn-huge lato">Shop Now</a> </p>
+                    </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Real Madrid CF</h3>
+                <div class="media-body media-middle">
+                    <p><a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a> </p>
+                     </div>
+                <div class="media-right">
+                    <img style="width:100px;height:100px" src="resources/images/realmadrid.png">
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3> FC Barcelona</h3>
+                <div class="media-left">
+                    <img style="width:100px;height:100px" src="resources/images/fcbarca.jpg">
+                </div>
+                <div class="media-body media-middle">
+                    <p><a href="#" style="margin-left:100px" class="btn btn-danger btn-lg btn-huge btn-responsive lato">Shop Now</a> </p>
+                    </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>FC Bayern Munich </h3>
+                <div class="media-body media-middle">
+                    <p><a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a> </p>
+                    </div>
+                <div class="media-right">
+                    <img style="width:100px;height:100px" src="resources/images/fcbayren.png">
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Arsenal FC</h3>
+                <div class="media-left">
+                    <img style="width:100px;height:100px" src="resources/images/arsenal.jpg">
+                </div>
+                <div class="media-body media-middle">
+                    <p><a href="#" style="margin-left:100px" class="btn btn-danger btn-responsive btn-lg btn-huge lato">Shop Now</a> </p>
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Juventus FC</h3>
+                <div class="media-body media-middle">
+                 	<p><a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a> </p>
+                </div>
+                <div class="media-right">
+                    <img style="width:100px;height:100px" src="resources/images/juventus.jpg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+
+<section class="container-fluid" id="section3">
+    <h1 class="text-center"><p class="text-center">
+                <img class="img-responsive center-block" style="width:200px;height:150px" src="resources/images/myclub-logo1.png" alt="myClub logo">
+            </p></h1>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h3 class="text-center lato slideInUp animate">The <strong>myClub</strong> is a one stop shop for all your sports clubs merchandise needs.</h3>
+            <br>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-1">myClub understands its shoppers needs and caters to them with choice of jersey , accessories, footwear from over various leading sports and international brands.</div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-4 text-right">Being e-commerce store for clubs merchandise, myClub aims at providing a hassle free and enjoyable shopping experience to all its shoppers.</div>
+            </div>
+            <br>
+            
+        </div>
+    </div>
+</section>
+
+<section id="section4">
+    <div class="container v-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Make Contact</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-1">
+                <div class="row form-group">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required="">
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="middleName" name="firstName" placeholder="Middle Name" required="">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required="">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-5">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="email" class="form-control" name="phone" placeholder="Phone" required="">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Description" required="">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-10">
+                        <button class="btn btn-danger btn-lg pull-right">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pull-right">
+                <address>
+                  <strong>myClub</strong><br>
+                  795 Folsom Ave, Suite 600<br>
+                  New Delhi, India<br>
+                  P: (123) 456-7890
+                </address>
+                <address>
+              <strong>Email Us</strong><br>
+              <a href="mailto:#" style="color:#f44d3c">support@myClub.com</a>
+            </address>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-distributed" id="footer">
+
+			<div class="footer-left">
+
+			<img class=" img-responsive" style="width:200px;height:150px; margin-left:20px" src="resources/images/myclub-logo1.png" alt="myClub logo">
+				<br>
+				<br>
+				<p class="nav">
+					<a href="#section1">Home</a>
+					·
+					<a href="#">Shop</a>
+					·
+					<a href="About Us">About</a>
+					·
+					<a href="Contact Us">Contact</a>
+				</p>
+				<br>
+				<p class="footer-company-name">myClub.com &copy; 2016 | All Rights Reserved.</p>
 			</div>
-</div>
-<br>
 
-<br>
-<br>
+			<div class="footer-center">
 
-	<!--  ***********************   TRending Clubs   **********************  -->
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span> New Delhi</p> , <p style="color:#f44d3c">India</p>
+				</div>
 
-<div>
-  <h2 class="text-center"><dt>Trending Clubs</dt></h2><br>
-  <br><div class="row">
-    <div class="col-md-3"style="margin-left:200px;" >
-      <a href="resources/images/ManUtd.jpg" title=" MAN UTD">
-        
-        <img src="resources/images/ManUtd.jpg" class="img-rounded center-block img-responsive"alt="MAN UTD " style="width:200px;height:200px">
-        <br><h4 class="text-center">MAN UTD</h4>
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a href="resources/images/realmadrid.jpg" title="Real Madrid">
-        <p></p>
-        <img src="resources/images/realmadrid.jpg" class="img-rounded center-block img-responsive " alt="Real Madrid" style="width:200px;height:200px">
-        <br><h4 class="text-center">REAL MADRID</h4>
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a href="resources/images/fcbarca.jpg" title=" FC Barcelona">
-        <p></p>
-        <img src="resources/images/fcbarca.jpg" class="img-rounded center-block img-responsive" alt="FC BARCELONA" style="width:200px;height:200px">
-        <br> <h4 class="text-center">FC BARCELONA</h4>
-      </a>
-    </div>
-  </div>
-</div>
- <br> 
- 
- 
- 
- 		<!--    ***************************  Shop    myCLUB    ************************** -->
- 
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 999 123456</p>
+				</div>
 
-<br>
-<div>
-  <h2 class="text-center"><dt>Shop myClub</dt></h2><br>
-  <br><div class="row">
-    <div class="col-md-3"style="margin-left:200px;" >
-      <a href="resources/images/mens.jpg" title=" MENs">
-        
-        <img src="resources/images/mens.jpg" class="img-circle center-block img-responsive"alt="MEN's" style="width:200px;height:200px">
-        <br><h4 class="text-center">MEN</h4>
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a href="resources/images/womens.jpg" title="WOMENs">
-        <p></p>
-        <img src="resources/images/womens.jpg" class="img-circle center-block img-responsive" alt="WOMEN's" style="width:200px;height:200px">
-        <br> <h4 class="text-center">WOMEN</h4>
-      </a>
-    </div>
-    <div class="col-md-3 clearfix ">
-      <a href="resources/images/kids.jpg" title="KIds">
-        <p></p>
-        <img src="resources/images/kids.jpg" class="img-circle center-block img-responsive" alt="KIDs" style="width:200px;height:200px">
-        <br> <h4 class="text-center">KIDS</h4>
-      </a>
-    </div>
-  </div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a style="color:#f44d3c" href="mailto:support@muClub.com">support@myClub.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span style="color:#f44d3c">About the company</span>
+					myClub is a one stop shop for all your sports clubs merchandise needs. Brand is making a conscious effort to bring the power of sports to shoppers with an array of the latest clubs merchandise available in the country.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+<div class="scroll-up">
+    <a href="#"><i class="fa fa-angle-up"></i></a>
 </div>
 
-
-
- 	<!--   ***************************   Footer   ***************************** -->
- 	
- 	
-<br><div>
-  <jsp:include page="footer.jsp"/>
- </div>
-    </body>
-    </html>
-</head>
-<body>
-
-</body>
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="text-center"><img style="width:100px;height:100px" src="resources/images/user.png" class="img-circle"><br>Login</h2>
+            </div>
+            <div class="modal-body row"><br>
+                <form role="form" method="post" action="login" accept-charset="UTF-8" class=" form col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" name="username" placeholder="Username / Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-lg" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
+                        <br><span><a href="#">Forget password ?</a></span><br>
+                        <br>
+                        <a href="Signup" class="btn btn-hero btn-lg btn-block">Register Now</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

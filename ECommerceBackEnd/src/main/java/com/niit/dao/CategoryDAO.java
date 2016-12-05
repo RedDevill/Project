@@ -26,6 +26,7 @@ public class CategoryDAO {
 			return sessionFactory.openSession();
 		}
 
+		
 	/*public Category addCategory(String categoryID ,String categoryName,String categoryDescription)
 	{
 		Category c =new Category();

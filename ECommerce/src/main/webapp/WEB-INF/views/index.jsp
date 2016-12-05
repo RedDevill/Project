@@ -61,14 +61,7 @@
 </nav>
 
 <section class="container-fluid" id="section1">
-   <!--  <div class="v-center">
-        <h1 class="text-center">Just One Page</h1>
-        <h2 class="text-center lato animate slideInDown">Change It To Say <b>Something</b> Unique</h2>
-        <p class="text-center">
-            <br>
-            <a href="#" class="btn btn-danger btn-lg btn-huge lato" data-toggle="modal" data-target="#myModal">Get Free Membership</a>
-        </p>
-    </div> -->
+ 
   <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
   <!-- Overlay -->
   <div class="overlay"></div>
@@ -445,30 +438,6 @@
     </div>
 </section>
 
-
-<!-- <section class="container-fluid" id="section7">
-    <div class="row">
-        fontawesome icons
-        <div class="col-sm-1 col-sm-offset-3 col-xs-4 text-center">
-            <i class="fa fa-github fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-foursquare fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-pinterest fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-google-plus fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-twitter fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-dribbble fa-4x"></i>
-        </div>
-    </div>
-</section> -->
 <footer class="footer-distributed" id="footer">
 
 			<div class="footer-left">
@@ -528,50 +497,6 @@
 
 		</footer>
 
-<!-- <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-3 column">
-                <h4>Information</h4>
-                <ul class="nav">
-                    <li><a href="about-us.html">Products</a></li>
-                    <li><a href="about-us.html">Services</a></li>
-                    <li><a href="about-us.html">Benefits</a></li>
-                    <li><a href="elements.html">Developers</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Follow Us</h4>
-                <ul class="nav">
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Google+</a></li>
-                    <li><a href="#">Pinterest</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Contact Us</h4>
-                <ul class="nav">
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Headquarters</a></li>
-                    <li><a href="#">Management</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Customer Service</h4>
-                <ul class="nav">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Delivery Information</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-        /row
-        <p class="text-right">©2015</p>
-    </div>
-</footer> -->
 
 <div class="scroll-up">
     <a href="#"><i class="fa fa-angle-up"></i></a>
@@ -587,10 +512,10 @@
             <div class="modal-body row"><br>
                 <form role="form" method="post" action="login" accept-charset="UTF-8" class=" form col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
                     <div class="form-group">
-                        <input type="text" name="username" class="form-control input-lg" placeholder="Username / Email">
+                        <input type="text" name="username" class="form-control input-lg" placeholder="Username / Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control input-lg" placeholder="Password">
+                        <input type="password" name="password" class="form-control input-lg" placeholder="Password" required>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-danger btn-lg btn-block">Sign In</button>

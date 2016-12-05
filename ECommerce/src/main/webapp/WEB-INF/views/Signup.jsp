@@ -7,25 +7,26 @@
   <title>Sign Up</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
-
-
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
-    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
-
-
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
+    
     <link rel="stylesheet" href="resources/bootstrap/css/Signup.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  
+
+   
+     <link rel="stylesheet" href="resources/bootstrap/css1/styles.css" />
+     <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
     
    
     
@@ -70,128 +71,186 @@ html,body {
 	
 	
 <body>
- <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-       <!-- <img src="resources/images/logo.jpg" alt="myClub"> -->
-       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
-          <!-- span class="sr-only">Toggle navigation</span-->
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-         <a class="navbar-brand" href="index"> <img src="resources/images/logo.jpg" alt="myClub"></a>
+ <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-danger" href="#"><img src="resources/images/myclub-logo2.png" alt="myClub"></a>
         </div>
-        
-       <div id="navbar1" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li ><a href="index">HOME</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SHOP <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">MEN's</a></li>
-          <li><a href="#">WOMEN's</a></li>
-          <li><a href="#">KIDS</a></li>
-        </ul>
-      </li>
-      <li><a href="About Us">ABOUT US</a></li>
-      <li class="active"><a href="Signup">SIGN UP</a></li>
-    </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+        <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="index">Home</a></li>
+                <li><a href="#section2">Shop</a></li>
+                <li><a href="About Us">About Us</a></li>
+                <li><a href="Signup">Sign Up</a></li>
+                <!-- <li><a href="#section4"></a></li>
+                <li><a href="#section5"></a></li>
+                <li><a href="#section6"></a></li> -->
+                <li>&nbsp;</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+           	 <form class="navbar-form navbar-left" role="search">
+        		<div class="form-group">
+          		<input type="text" class="form-control" placeholder="Search">
+        		</div>
+        		<button type="submit" class="btn btn-danger btn-default">Submit</button>
+      		</form>
+                <li><a href="#" data-toggle="modal" data-target="#myModal"><i style="color:#1abc9c" class="fa fa-sign-in fa-lg"></i></a></li>
+            </ul>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <li class="dropdown">
-          <a href="#" class="dropdown-toggle " data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a>
-			<ul id="login-dp" class="dropdown-menu">
-				<li>
-					 <div class="row">
-							<div class="col-md-12">
-								Login via
-								<div class="social-buttons">
-									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-								</div>
-                                or
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputEmail2">user name</label>
-											 <input type="text" class="form-control" id="exampleInputEmail2" placeholder="UserName" name="username" required>
-										</div>
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="password" required>
-                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-										</div>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-										</div>
-										<div class="checkbox">
-											 <label>
-											 <input type="checkbox"> keep me logged-in
-											 </label>
-										</div>
-								 </form>
-							</div>
-							<div class="bottom text-center">
-								New here ? <a href=Signup><b>Join Us</b></a>
-							</div>
-					 </div>
-				</li>
-			</ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
 </nav>
+
 <br>
 
 <div class="container"style="margin-top:100px;">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
-            <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
+            <legend ><a  href="http://www.jquery2dotnet.com"><i style="color:#f44d3c" class="glyphicon glyphicon-globe"></i></a>  Sign up!</legend>
             <form action="SignUP" method="post" class="form" role="form">
-            <input class="form-control"  name="username" placeholder="User Name" type="text" />
+            <input class="form-control"  name="username" placeholder="User Name" type="text" required/>
             <div class="row">
                 <div class="col-xs-6 col-md-6">
                     <input class="form-control" name="firstname" placeholder="First Name" type="text"
                         required autofocus />
                 </div>
                 <div class="col-xs-6 col-md-6">
-                    <input class="form-control" name="lastname" placeholder="Last Name" type="text" required />
+                    <input class="form-control" name="lastname" placeholder="Last Name" type="text" />
                 </div>
             </div>
-            <input class="form-control"  name="email" placeholder="Your Email" type="email" />
-            <input class="form-control" id="password" name="password" placeholder="Password" type="password" />
+            <input class="form-control"  name="email" placeholder="Your Email" type="email" required/>
+            <input class="form-control" id="password" name="password" placeholder="Password" type="password" required/>
             <input class="form-control" id="ReEnterPassword" name="reenterpassword" placeholder="Re-Enter Password" type="password" />
           	<br>
             <label for="">Date of Birth</label>
             <br>
         	<div class="col-sm-8 input-group date">
-          	<input type="text" class="form-control inputstl" id="dateofbirth" name="dateofbirth" placeholder="Enter Date"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          	<input type="text" class="form-control inputstl" id="dateofbirth" name="dateofbirth" placeholder="Enter Date"><span class="input-group-addon"><i style="color:#f44d3c" class="glyphicon glyphicon-calendar"></i></span>
          	</div>
             
             <br>
-            <label for="">Gender :</label>
+            <label  for="">Gender :</label>
             <label class="radio-inline">
                 <input type="radio" name="gender" id="inlineCheckbox1" value="male" />
                 Male
             </label>
             <label class="radio-inline">
-                <input type="radio" name="gender" id="inlineCheckbox2" value="female" />
+                <input  type="radio" name="gender" id="inlineCheckbox2" value="female" />
                 Female
             </label>
             <br />
             <br />
-            <button id="SignUP" class="btn btn-lg btn-primary btn-block" type="submit" onclick="return Validate()">Sign Up
+            <button id="SignUP" class="btn btn-lg btn-primary btn-block btn-danger" type="submit" onclick="return Validate()">Sign Up
              </button>
             </form>
         </div>    
     </div>
     </div>
     <br>
-    <jsp:include page="footer.jsp"></jsp:include>
+    <footer class="footer-distributed" id="footer">
+
+			<div class="footer-left">
+
+			<img class=" img-responsive" style="width:200px;height:150px; margin-left:20px" src="resources/images/myclub-logo1.png" alt="myClub logo">
+				<br>
+				<br>
+				<p class="nav">
+					<a href="index">Home</a>
+					·
+					<a href="#">Shop</a>
+					·
+					<a href="About Us">About</a>
+					·
+					<a href="Contact Us">Contact</a>
+				</p>
+				<br>
+				<p class="footer-company-name">myClub.com &copy; 2016 | All Rights Reserved.</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span> New Delhi</p> , <p style="color:#f44d3c">India</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 999 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a style="color:#f44d3c" href="mailto:support@muClub.com">support@myClub.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span style="color:#f44d3c">About the company</span>
+					myClub is a one stop shop for all your sports clubs merchandise needs. Brand is making a conscious effort to bring the power of sports to shoppers with an array of the latest clubs merchandise available in the country.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+
+
+<div class="scroll-up">
+    <a href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="text-center"><img style="width:100px;height:100px" src="resources/images/user.png" class="img-circle"><br>Login</h2>
+            </div>
+            <div class="modal-body row"><br>
+                <form role="form" method="post" action="login" accept-charset="UTF-8" class=" form col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" name="username" placeholder="Username / Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-lg" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
+                        <br><span><a href="#">Forget password ?</a></span><br>
+                        <br>
+                        <a href=Signup class="btn btn-hero btn-lg btn-block">Register Now</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <script src="js/scripts.js"></script>
     </body>
     </html>
