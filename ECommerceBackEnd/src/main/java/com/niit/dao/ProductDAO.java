@@ -2,6 +2,9 @@ package com.niit.dao;
 
 
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,21 +28,15 @@ public class ProductDAO {
 		{
 			return sessionFactory.openSession();
 		}
-
-	/*public Product addProduct(String productID ,String productName,String productDescription, String quantity, String brand, String price, String supplier, String category )
-	{
-		Product p =new Product();
-		p.setProductID(productID);
-		p.setProductName(productName);
-		p.setProductDescription(productDescription);
-		p.setQuantity(quantity);
-		p.setBrand(brand);
-		p.setPrice(price);
-		p.setSupplier(supplier);
-		p.setCategory(category);
-	
-		return p;
-	}*/
+		
+		public List<Product> getProducts()
+		{
+			Session sess=getSession();
+			String hql="from Product";
+			Query q = sess.createQuery(hql);
+			List<Product> listProduct =q.list();
+			return listProduct;
+		}
 	
 	@Transactional
 	public void addProduct(Product p)
@@ -47,6 +44,24 @@ public class ProductDAO {
 		Session sess=getSession();
 		org.hibernate.Transaction tx=sess.beginTransaction();
 		sess.save(p);
+		tx.commit();
+		sess.close();
+	}
+	@Transactional
+	public void updateProduct(Product p)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		sess.update(p);
+		tx.commit();
+		sess.close();
+	}
+	@Transactional
+	public void deleteProduct(Product p)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		sess.delete(p);
 		tx.commit();
 		sess.close();
 	}

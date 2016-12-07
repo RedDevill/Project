@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%@page isELIgnored="false" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
-  <title>Admin</title>
+  <title>Add Category</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -20,28 +21,25 @@
     <link rel="stylesheet" href="resources/bootstrap/css1/styles.css" />
      <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
 
-<style>
- section {
+<style type="text/css">
+html,body {
+	height:100%;
+    background:center no-repeat fixed url('');
+    background-size: cover;
+    color:#444;
+    font-family: 'Lato', sans-serif;
+}
+section {
 	padding-top:70px;  
     padding-bottom:50px;
-    min-height:50%;
+    min-height:70%;
     min-height:calc(100% - 0);
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
- 
-  </style>
-<style type="text/css">
-html, body {
-	height: 110%;
-	background: center no-repeat fixed
-		url('http://i41.tinypic.com/20zxpwl.jpg');
-	background-size: cover;
-	color:#444;
-    font-family: 'Lato', sans-serif;
-}
 </style>
+
 </head>
 
 
@@ -66,11 +64,7 @@ html, body {
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="index">Home</a></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Users <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="ViewUsers">View Users</a></li>
-						</ul></li>
+                <li><a href="">Users</a></li>
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -91,6 +85,7 @@ html, body {
 						</ul></li>
 					<li>&nbsp;</li>
 				</ul>
+
 				<ul class="nav navbar-nav navbar-right">
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
@@ -154,16 +149,46 @@ html, body {
 		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 	<script src="js/scripts.js"></script>
+	
 
 <br>
-<section>
-<div style="margin-left:200px; margin-top:100px;">
-<h1 style="color:#f44d3c"><dt>Hello!! Admin </dt></h1>
+<br>
+<br>
+<div class="container">
+ <div style="margin-left:0px; margin-top:100px;">
+<h1 style="color: #f44d3c"><dt>Users</dt></h1>
+</div> 
+  <table class="table table-hover">
+  <br>
+    <thead>
+      <tr>
+      	<th>Username</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Date of Birth</th>
+        <th>Gender</th> 
+      </tr>
+    </thead>
+    <br>
+    <c:forEach var="x" items="${listUsers}">
+    <tbody>
+      <tr>
+      	<td>${x.username}</td>
+        <td>${x.firstname}</td>
+        <td>${x.lastname}</td>
+        <td>${x.email}</td>
+        <td>${x.password}</td>
+        <td>${x.dateofbirth}</td>
+        <td>${x.gender}</td>
+      </tr>
+          </tbody>
+      </c:forEach>
+  </table>
 </div>
-</section>
-<br>
-<br>
 
+<br>
 <footer class="footer-distributed" id="footer">
 
 			<div class="footer-left">
@@ -172,7 +197,7 @@ html, body {
 				<br>
 				<br>
 				<p class="nav">
-					<a href="index">Home</a>
+					<a href="#section1">Home</a>
 					·
 					<a href="#">Shop</a>
 					·
@@ -222,6 +247,5 @@ html, body {
 			</div>
 
 		</footer>
-
 </body>
 </html>

@@ -1,5 +1,7 @@
 package com.niit.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.dao.UserDAO;
+import com.niit.model.Product;
 import com.niit.model.User;
 
 
@@ -72,4 +75,14 @@ public class UserController {
 
 			
 		}
+	
+	@RequestMapping("/ViewUsers")
+	public ModelAndView viewProduct()
+	{
+		ModelAndView mv=new ModelAndView("ViewUsers");
+		List<User> list=userDAO.getUser();
+		System.out.println("Product list"+list);
+		mv.addObject("listUsers",list);
+		return mv;
+	}
 }

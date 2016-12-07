@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.model.Product;
 import com.niit.model.User;
 
 @Repository
@@ -49,18 +50,14 @@ public class UserDAO {
 		return flag;
 	}
 	
-	/*public User adduser(String firstname,String lastname,String email,String spassword,String dateofbirth, String gender)
+	public List<User> getUser()
 	{
-		User u =new User();
-		u.setFirstname(firstname);
-		u.setEmail(email);
-		u.setLastname(lastname);
-		u.setSpassword(spassword);
-		u.setDateofbirth(dateofbirth);
-		u.setGender(gender);
-	
-		return u;
-	}*/
+		Session sess=getSession();
+		String hql="from User";
+		Query q = sess.createQuery(hql);
+		List<User> listUser =q.list();
+		return listUser;
+	}
 	
 	@Transactional
 	public void addUser(User u)

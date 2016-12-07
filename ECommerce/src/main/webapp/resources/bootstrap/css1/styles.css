@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 @import url(http://fonts.googleapis.com/css?family=Bitter:400);
 
+
+
 html,body {
 	height:100%;
     background:center no-repeat fixed url('http://www.hdwidewallpaper.com/wp-content/uploads/2016/06/old-trafford-high-resolution-wallpaper-desktop-background-pictures-free.jpg');
@@ -203,7 +205,7 @@ footer .nav>a:hover {
     background-color:transparent;
 	color:#fff;
 }
-
+ 
 
 /* ****************************CAROUSEL******************************** */
 

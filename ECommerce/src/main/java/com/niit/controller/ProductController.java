@@ -1,5 +1,7 @@
 package com.niit.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +19,8 @@ public class ProductController {
 	ProductDAO productDAO;
 
 	@RequestMapping("/submit1")
-	public ModelAndView saveAddProduct(HttpServletRequest request){
-		ModelAndView mv = new ModelAndView("ViewProduct");
+	public String saveAddProduct(HttpServletRequest request){
+		//ModelAndView mv = new ModelAndView("ViewProduct");
 		Product p =new Product();
 		String productID=request.getParameter("productID");
 		String productName=request.getParameter("productName");
@@ -37,10 +39,21 @@ public class ProductController {
 		p.setSupplier(supplier);
 		p.setCategory(category);
 		productDAO.addProduct(p);
-		mv.addObject("product", p);
-		return mv;
+		//mv.addObject("product", p);
+		return "redirect:/ViewProduct";
+		
 
 		
 	}
+	@RequestMapping("/ViewProduct")
+	public ModelAndView viewProduct()
+	{
+		ModelAndView mv=new ModelAndView("ViewProduct");
+		List<Product> list=productDAO.getProducts();
+		System.out.println("Product list"+list);
+		mv.addObject("listProduct",list);
+		return mv;
+	}
+	
 
 }

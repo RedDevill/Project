@@ -1,6 +1,9 @@
 package com.niit.dao;
 
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.model.Category;
+import com.niit.model.Product;
 import com.niit.model.User;
 
 
@@ -25,17 +29,15 @@ public class CategoryDAO {
 		{
 			return sessionFactory.openSession();
 		}
-
 		
-	/*public Category addCategory(String categoryID ,String categoryName,String categoryDescription)
-	{
-		Category c =new Category();
-		c.setCategoryID(categoryID);
-		c.setCategoryName(categoryName);
-		c.setCategoryDescription(categoryDescription);
-	
-		return c;
-	}*/
+		public List<Category> getCategory()
+		{
+			Session sess=getSession();
+			String hql="from Category";
+			Query q = sess.createQuery(hql);
+			List<Category> listCategory =q.list();
+			return listCategory;
+		}
 	
 	@Transactional
 	public void addCategory(Category c)
@@ -43,6 +45,26 @@ public class CategoryDAO {
 		Session sess=getSession();
 		org.hibernate.Transaction tx=sess.beginTransaction();
 		sess.save(c);
+		tx.commit();
+		sess.close();
+	}
+	
+	@Transactional
+	public void updateCategory(Category c)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		sess.update(c);
+		tx.commit();
+		sess.close();
+	}
+	
+	@Transactional
+	public void deleteCategory(Category c)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		sess.delete(c);
 		tx.commit();
 		sess.close();
 	}

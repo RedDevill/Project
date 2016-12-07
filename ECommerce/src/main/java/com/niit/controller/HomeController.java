@@ -59,24 +59,10 @@ public class HomeController {
 		return mv;
 	}
 	
-	@RequestMapping("ViewCategory")
-	public ModelAndView ViewCategory()
-	{
-		ModelAndView mv=new ModelAndView("ViewCategory");
-		return mv;
-	}
-	
 	@RequestMapping("AddProduct")
 	public ModelAndView AddProduct()
 	{
 		ModelAndView mv=new ModelAndView("AddProduct");
-		return mv;
-	}
-	
-	@RequestMapping("ViewProduct")
-	public ModelAndView ViewProduct()
-	{
-		ModelAndView mv=new ModelAndView("ViewProduct");
 		return mv;
 	}
 	
@@ -87,10 +73,4 @@ public class HomeController {
 		return mv;
 	}
 
-	@RequestMapping("ViewSupplier")
-	public ModelAndView ViewSupplier()
-	{
-		ModelAndView mv=new ModelAndView("ViewSupplier");
-		return mv;
-	}
 }

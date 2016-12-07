@@ -65,9 +65,9 @@
         		<button type="submit" class="btn btn-danger btn-default">Submit</button>
       		</form>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <% 	String username=request.getParameter("username"); 
+                <% 	String username=(String)session.getAttribute("sessname");
 					out.print("Welcome "+ username);
-					session.setAttribute("sessname",username); 
+					//session.setAttribute("sessname",username); 
 				%> <span style="color:#1abc9c" class="glyphicon glyphicon-triangle-bottom"></span></a>
         			<ul class="dropdown-menu">
           				<li><a href="#">My Account</a></li>
