@@ -76,7 +76,7 @@ section {
 							<li><a href="AddProduct">Add Product</a></li>
 							<li><a href="ViewProduct">View Product</a></li>
 						</ul></li>
-					<li class="dropdown"><a class="dropdown-toggle"
+					<li class="dropdown active"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="AddSupplier">Add Supplier</a></li>
@@ -168,9 +168,9 @@ section {
     <c:forEach var="x" items="${listSupplier}">
     <tbody>
       <tr>
-        <td>${supplier.supplierID}</td>
-        <td>${supplier.supplierName}</td>
-        <td>${supplier.supplierDescription}</td>
+        <td>${x.supplierID}</td>
+        <td>${x.supplierName}</td>
+        <td>${x.supplierDescription}</td>
         <td><a href="#">Edit</a></td>
         <td><a href="#">Delete</a></td>
       </tr>

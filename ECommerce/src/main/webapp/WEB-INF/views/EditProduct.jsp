@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%@page isELIgnored="false" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
-  <title>View Product</title>
+<c:url value="/resources/bootstrap/css1" var="a"></c:url>
+  <title>Edit Product</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -17,29 +18,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
-    
-    <link rel="stylesheet" href="resources/bootstrap/css1/styles.css" />
-     <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
 
-
-<style type="text/css">
-html,body {
-	height:100%;
-    background:center no-repeat fixed url('');
-    background-size: cover;
-    color:#444;
-    font-family: 'Lato', sans-serif;
-}
-section {
-	padding-top:70px;  
-    padding-bottom:50px;
-    min-height:70%;
-    min-height:calc(100% - 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-</style>
+ 
+    <link rel="stylesheet" href="${a}/styles.css" />
+    <link rel="stylesheet" href="css1/footer-distributed-with-address-and-phones.css" />
 </head>
 
 
@@ -150,47 +132,87 @@ section {
 	<script src="js/scripts.js"></script>
 
 <br>
-<div class="container">
- <div style="margin-left:0px; margin-top:100px;">
-<h1 style="color: #f44d3c"><dt>Product</dt></h1>
-</div>
 <br>
 <br>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>Product Description</th>
-        <th>Quantity</th>
-        <th>Brand</th>
-        <th>Price</th>
-        <th>Supplier</th>
-        <th>Category</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
-    
-    <c:forEach var="x" items="${listProduct}">
-    <tbody>
-      <tr>
-        <td>${x.productID}</td>
-        <td>${x.productName}</td>
-        <td>${x.productDescription}</td>
-        <td>${x.quantity}</td>
-        <td>${x.brand}</td>
-        <td>${x.price}</td>
-        <td>${x.supplier}</td>
-        <td>${x.category}</td>
-        <td><a href="EditProduct/${x.productID}">Edit</a></td>
-        <td><a href="deleteproduct/${x.productID}">Delete</a></td>
-      </tr>
-          </tbody>
-        </c:forEach>
-  </table>
-</div>
-
+<div class="container"style="margin-top:70px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-6 well well-sm">
+            <legend><a href="http://www.jquery2dotnet.com"><i style="color:#f44d3c"	 class="glyphicon glyphicon-th-list"></i></a> ADD Product Details</legend>
+            <form:form action="/ECommerce/editsave" method="post">
+            <div class="row">
+            <div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Product ID :</label>
+              <div class="col-md-6">
+                <form:hidden id="productID" path="productID" placeholder="Product ID" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Product Name :</label>
+              <div class="col-md-6">
+                <form:input id="productname" path="productName" type="text" placeholder="Product name" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Product Description :</label>
+              <div class="col-md-6">
+                <form:input id="productDescription" path="productDescription" type="text" placeholder="Product Description" class="form-control"/>
+              </div>
+            </div>
+    		<div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Quantity :</label>
+              <div class="col-md-6">
+                <form:input id="quantity" path="quantity" type="text" placeholder="Product quantity" class="form-control"/>
+              </div>
+            </div>
+    		<div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Brand :</label>
+              <div class="col-md-6">
+                <form:input id="brand" path="brand" type="text" placeholder="Product Brand" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Price :</label>
+              <div class="col-md-6">
+                <form:input id="price" path="price" type="text" placeholder="Price" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Supplier :</label>
+              <div class="col-md-3">
+                <!-- <input id="supplier" name="supplier" type="text" placeholder="Product ID" class="form-control"> -->
+            		<select class="form-control" name="supplier">
+            			<option value="Puma">Supplier</option>
+                        <option value="Puma">Puma</option>
+                        <option value="Adidas">Adidas</option>
+                        <option value="Nike">Nike</option>
+                    </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-5 control-label text-left" for="id">Category :</label>
+              <div class="col-md-3">
+                <!-- <input id="supplier" name="supplier" type="text" placeholder="Product ID" class="form-control"> -->
+            		<select class="form-control" name="category">
+            			<option value="Puma">Category</option>
+                        <option value="Shirt">Shirt</option>
+                        <option value="Shorts">Shorts</option>
+                        <option value="Shoes">Shoes</option>
+                    </select>
+              </div>
+            </div>
+            <br />
+            <br />
+    		<div class="form-group">
+              <div class="col-md-12 text-center">
+                <button id="submit1" type="submit" class="btn btn-danger btn-primary btn-lg ">UPDATE</button>
+              </div>
+            </div>
+          </form:form>
+        </div>
+        
+    </div>
+    </div>
+    </div>
 <br>
 <br>
 <footer class="footer-distributed" id="footer">
@@ -250,6 +272,5 @@ section {
 
 			</div>
 
-		</footer>
-</body>
+		</footer></body>
 </html>

@@ -58,7 +58,7 @@
 							<li><a href="AddProduct">Add Product</a></li>
 							<li><a href="ViewProduct">View Product</a></li>
 						</ul></li>
-					<li class="dropdown"><a class="dropdown-toggle"
+					<li class="dropdown active"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="AddSupplier">Add Supplier</a></li>

@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.model.Product;
+
 @Controller
 public class HomeController {
 	
@@ -59,12 +61,6 @@ public class HomeController {
 		return mv;
 	}
 	
-	@RequestMapping("AddProduct")
-	public ModelAndView AddProduct()
-	{
-		ModelAndView mv=new ModelAndView("AddProduct");
-		return mv;
-	}
 	
 	@RequestMapping("AddSupplier")
 	public ModelAndView AddSupplier()

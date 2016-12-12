@@ -64,7 +64,7 @@ section {
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="index">Home</a></li>
                 <li><a href="ViewUsers">Users</a></li>
-					<li class="dropdown"><a class="dropdown-toggle"
+					<li class="dropdown active"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="AddCategory">Add Category</a></li>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 	<!--    *****************************   HEAD    ***************************  -->
 
@@ -53,7 +55,7 @@
 							<li><a href="AddCategory">Add Category</a></li>
 							<li><a href="ViewCategory">View Category</a></li>
 						</ul></li>
-					<li class="dropdown"><a class="dropdown-toggle"
+					<li class="dropdown active"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="AddProduct">Add Product</a></li>
@@ -138,42 +140,42 @@
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-md-6 well well-sm">
             <legend><a href="http://www.jquery2dotnet.com"><i style="color:#f44d3c"	 class="glyphicon glyphicon-th-list"></i></a> ADD Product Details</legend>
-            <form action="submit1" method="post" class="form" role="form">
+            <form:form action="submit1" method="post" class="form" role="form">
             <div class="row">
             <div class="form-group">
               <label class="col-md-5 control-label text-left" for="id">Product ID :</label>
               <div class="col-md-6">
-                <input id="productID" name="productID" type="text" placeholder="Product ID" class="form-control">
+                <form:input id="productID" path="productID" type="text" placeholder="Product ID" class="form-control"/>
               </div>
             </div>
             <div class="form-group">
               <label class="col-md-5 control-label text-left" for="id">Product Name :</label>
               <div class="col-md-6">
-                <input id="productname" name="productName" type="text" placeholder="Product name" class="form-control">
+                <form:input id="productname" path="productName" type="text" placeholder="Product name" class="form-control"/>
               </div>
             </div>
             <div class="form-group">
               <label class="col-md-5 control-label text-left" for="id">Product Description :</label>
               <div class="col-md-6">
-                <input id="productDescription" name="productDescription" type="text" placeholder="Product Description" class="form-control">
+                <form:input id="productDescription" path="productDescription" type="text" placeholder="Product Description" class="form-control"/>
               </div>
             </div>
     		<div class="form-group">
               <label class="col-md-5 control-label text-left" for="id">Quantity :</label>
               <div class="col-md-6">
-                <input id="quantity" name="quantity" type="text" placeholder="Product quantity" class="form-control">
+                <form:input id="quantity" path="quantity" type="text" placeholder="Product quantity" class="form-control"/>
               </div>
             </div>
     		<div class="form-group">
               <label class="col-md-5 control-label text-left" for="id">Brand :</label>
               <div class="col-md-6">
-                <input id="brand" name="brand" type="text" placeholder="Product Brand" class="form-control">
+                <form:input id="brand" path="brand" type="text" placeholder="Product Brand" class="form-control"/>
               </div>
             </div>
             <div class="form-group">
               <label class="col-md-5 control-label text-left" for="id">Price :</label>
               <div class="col-md-6">
-                <input id="price" name="price" type="text" placeholder="Price" class="form-control">
+                <form:input id="price" path="price" type="text" placeholder="Price" class="form-control"/>
               </div>
             </div>
             <div class="form-group">
@@ -207,7 +209,7 @@
                 <button id="submit1" type="submit" class="btn btn-danger btn-primary btn-lg ">ADD</button>
               </div>
             </div>
-          </form>
+          </form:form>
         </div>
         
     </div>

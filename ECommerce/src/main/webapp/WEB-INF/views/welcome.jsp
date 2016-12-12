@@ -49,7 +49,7 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="index">Home</a></li>
+                <li class="active"><a href="index">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="About Us">About Us</a></li>
                 <!-- <li><a href="#section4"></a></li>

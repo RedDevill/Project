@@ -38,7 +38,7 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="#section1">Home</a></li>
+                <li class="active"><a href="#section1">Home</a></li>
                 <li><a href="#section2">Shop</a></li>
                 <li><a href="#section3">About Us</a></li>
                 <li><a href="Admin">Admin</a></li>

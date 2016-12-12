@@ -59,7 +59,7 @@
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="index">Home</a></li>
                 <li><a href="#section2">Shop</a></li>
-                <li><a href="#section3">About Us</a></li>
+                <li class="active"><a href="#section3">About Us</a></li>
                 <li>&nbsp;</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

@@ -87,7 +87,7 @@ html,body {
                 <li><a href="index">Home</a></li>
                 <li><a href="#section2">Shop</a></li>
                 <li><a href="About Us">About Us</a></li>
-                <li><a href="Signup">Sign Up</a></li>
+                <li class="active"><a href="Signup">Sign Up</a></li>
                 <!-- <li><a href="#section4"></a></li>
                 <li><a href="#section5"></a></li>
                 <li><a href="#section6"></a></li> -->
