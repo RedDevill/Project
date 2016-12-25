@@ -32,13 +32,13 @@
 				<br>
 				<br>
 				<p class="nav">
-					<a href="index">Home</a>
+					<a style="color:#f44d3c" href="index">Home</a>
 					·
-					<a href="#">Shop</a>
+					<a style="color:#f44d3c" href="#">Shop</a>
 					·
-					<a href="About Us">About</a>
+					<a style="color:#f44d3c" href="About Us">About</a>
 					·
-					<a href="Contact Us">Contact</a>
+					<a style="color:#f44d3c" href="Contact Us">Contact</a>
 				</p>
 				<br>
 				<p class="footer-company-name">myClub.com &copy; 2016 | All Rights Reserved.</p>

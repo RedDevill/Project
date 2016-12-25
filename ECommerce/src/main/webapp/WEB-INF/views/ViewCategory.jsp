@@ -170,8 +170,8 @@ section {
         <td>${x.categoryID}</td>
         <td>${x.categoryName}</td>
         <td>${x.categoryDescription}</td>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
+        <td><a href="EditCategory/${x.categoryID}">Edit</a></td>
+        <td><a href="deletecategory/${x.categoryID}">Delete</a></td>
       </tr>
       </tbody>
       </c:forEach>

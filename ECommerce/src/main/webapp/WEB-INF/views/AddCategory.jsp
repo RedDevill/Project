@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
@@ -138,7 +139,7 @@
 	<div class="row">
       <div class="col-md-7">
         <div class="well well-sm">
-          <form class="form-horizontal" action="submit" method="post">
+          <form:form class="form-horizontal" action="submit" method="post">
           <fieldset>
             <legend class="text-center">Add Category</legend>
     
@@ -146,7 +147,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label text-left" for="id">Category ID :</label>
               <div class="col-md-8">
-                <input id="categoryID" name="categoryID" type="text" placeholder="Category ID" class="form-control">
+                <form:input id="categoryID" path="categoryID" type="text" placeholder="Category ID" class="form-control"/>
               </div>
             </div>
     
@@ -154,7 +155,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="name">Category NAME :</label>
               <div class="col-md-8">
-                <input id="categoryName" name="categoryName" type="text" placeholder="Category Name" class="form-control">
+                <form:input id="categoryName" path="categoryName" type="text" placeholder="Category Name" class="form-control"/>
               </div>
             </div>
     
@@ -162,7 +163,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="message">Category Description :</label>
               <div class="col-md-8">
-                <textarea class="form-control" id="categoryDescription" name="categoryDescription" placeholder="Enter description here..." rows="5"></textarea>
+                <form:textarea class="form-control" id="categoryDescription" path="categoryDescription" placeholder="Enter description here..." rows="5" />
               </div>
             </div>
     
@@ -173,7 +174,7 @@
               </div>
             </div>
           </fieldset>
-          </form>
+          </form:form>
         </div>
       </div>
 	</div>

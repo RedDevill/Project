@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 @Entity
 public class User {
 	@Id
-	
 	private String username;
 	private String firstname;
 	private String lastname;
@@ -18,6 +17,21 @@ public class User {
 	private String email;
 	private String dateofbirth;
 	private String gender;
+	private Boolean enabled;
+	private String role;
+	
+	public Boolean getEnabled() {
+		return enabled;
+	}
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	
 	
 	

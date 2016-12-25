@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.model.Category;
 import com.niit.model.Product;
 import com.niit.model.Supplier;
 
@@ -48,15 +49,50 @@ public class SupplierDAO {
 		}
 		
 		@Transactional
-		public void updateSupplier(Supplier s)
+		public void updateSupplier(String supplierID)
 		{
 			Session sess=getSession();
 			org.hibernate.Transaction tx=sess.beginTransaction();
+			Supplier s=sess.get(Supplier.class, supplierID);
 			sess.update(s);
 			tx.commit();
 			sess.close();
 		}
 		
+		@Transactional
+		public void updateSupplier1(Supplier supplier)
+		{
+			Session sess=getSession();
+			org.hibernate.Transaction tx=sess.beginTransaction();
+			sess.update(supplier);
+			tx.commit();
+			sess.close();
+		}
+		
+		
+		
+		@Transactional
+		public Supplier getSupplierByID(String supplierID)
+		{
+			Session sess=getSession();
+			org.hibernate.Transaction tx=sess.beginTransaction();
+			
+			Supplier s=sess.get(Supplier.class, supplierID);
+			return s ;
+		}
+		
+		
+		@Transactional
+		public void deletesupplier1(String supplierID)
+		{
+			Session sess=getSession();
+			org.hibernate.Transaction tx=sess.beginTransaction();
+			
+			Supplier s=sess.get(Supplier.class, supplierID);
+			sess.delete(s);
+			tx.commit();
+			sess.close();
+		}
 		@Transactional
 		public void deleteSupplier(Supplier s)
 		{

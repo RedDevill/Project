@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page isELIgnored="false" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
-  <title>View Product</title>
+  <title>Edit Supplier</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<c:url value="/resources/images" var="y"/>
+<c:url value="/resources/bootstrap/css1" var="a"/>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,28 +21,10 @@
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
     
-    <link rel="stylesheet" href="resources/bootstrap/css1/styles.css" />
-     <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
+    <link rel="stylesheet" href="${a}/styles.css" />
+     <link rel="stylesheet" href="${a}/footer-distributed-with-address-and-phones.css" />
 
 
-<style type="text/css">
-html,body {
-	height:100%;
-    background:center no-repeat fixed url('');
-    background-size: cover;
-    color:#444;
-    font-family: 'Lato', sans-serif;
-}
-section {
-	padding-top:70px;  
-    padding-bottom:50px;
-    min-height:70%;
-    min-height:calc(100% - 0);
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-</style>
 </head>
 
 
@@ -49,6 +34,7 @@ section {
 	
 	
 <body>
+<%-- <jsp:include page="header.jsp"></jsp:include> --%>
 
 <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
@@ -59,7 +45,7 @@ section {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-danger" href="#"><img src="resources/images/myclub-logo2.png" alt="myClub"></a>
+            <a class="navbar-brand text-danger" href="#"><img src="${y}/myclub-logo2.png" alt="myClub"></a>
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
@@ -71,14 +57,14 @@ section {
 							<li><a href="AddCategory">Add Category</a></li>
 							<li><a href="ViewCategory">View Category</a></li>
 						</ul></li>
-					<li class="dropdown active"><a class="dropdown-toggle"
-						data-toggle="dropdown active" href="#">Product <span class="caret"></span></a>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="AddProduct">Add Product</a></li>
 							<li><a href="ViewProduct">View Product</a></li>
 						</ul></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
+					<li class="dropdown active"><a class="dropdown-toggle"
+						data-toggle="dropdown " href="#">Supplier <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="AddSupplier">Add Supplier</a></li>
 							<li><a href="ViewSupplier">View Supplier</a></li>
@@ -150,45 +136,52 @@ section {
 	<script src="js/scripts.js"></script>
 
 <br>
-<div class="container">
- <div style="margin-left:0px; margin-top:100px;">
-<h1 style="color: #f44d3c"><dt>Product</dt></h1>
-</div>
 <br>
 <br>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>Product Description</th>
-        <th>Quantity</th>
-        <th>Brand</th>
-        <th>Price</th>
-        <th>Supplier</th>
-        <th>Category</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
+
+ <div class="container"style="margin-top:80px;">
+	<div class="row">
+      <div class="col-md-7">
+        <div class="well well-sm">
+          <form:form class="form-horizontal" action="/ECommerce/editsave2" method="post">
+          <fieldset>
+            <legend class="text-center">Add Supplier</legend>
     
-    <c:forEach var="x" items="${listProduct}">
-    <tbody>
-      <tr>
-        <td>${x.productID}</td>
-        <td>${x.productName}</td>
-        <td>${x.productDescription}</td>
-        <td>${x.quantity}</td>
-        <td>${x.brand}</td>
-        <td>${x.price}</td>
-        <td>${x.supplier}</td>
-        <td>${x.category}</td>
-        <td><a href="EditProduct/${x.productID}">Edit</a></td>
-        <td><a href="deleteproduct/${x.productID}">Delete</a></td>
-      </tr>
-          </tbody>
-        </c:forEach>
-  </table>
+            <!-- ID input-->
+            <div class="form-group">
+              <!-- <label class="col-md-4 control-label text-left" for="id">Supplier ID :</label> -->
+              <div class="col-md-8">
+                <form:hidden id="supplierID" path="supplierID"  placeholder="Supplier ID" class="form-control"/>
+              </div>
+            </div>
+    
+            <!-- Name input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Supplier NAME :</label>
+              <div class="col-md-8">
+                <form:input id="supplierName" path="supplierName" type="text" placeholder="Supplier Name" class="form-control"/>
+              </div>
+            </div>
+    
+            <!-- Description body -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="message">Supplier Description :</label>
+              <div class="col-md-8">
+                <form:textarea class="form-control" id="supplierDescription" path="supplierDescription" placeholder="Enter description here..." rows="5"></form:textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-center">
+                <button id="submit2" type="submit" class="btn btn-danger btn-primary btn-lg ">Update</button>
+              </div>
+            </div>
+          </fieldset>
+         </form:form>
+        </div>
+      </div>
+	</div>
 </div>
 
 <br>
@@ -197,7 +190,7 @@ section {
 
 			<div class="footer-left">
 
-			<img class=" img-responsive" style="width:200px;height:150px; margin-left:20px" src="resources/images/myclub-logo1.png" alt="myClub logo">
+			<img class=" img-responsive" style="width:200px;height:150px; margin-left:20px" src="${y}/myclub-logo1.png" alt="myClub logo">
 				<br>
 				<br>
 				<p class="nav">
@@ -250,6 +243,5 @@ section {
 
 			</div>
 
-		</footer>
-</body>
+		</footer></body>
 </html>

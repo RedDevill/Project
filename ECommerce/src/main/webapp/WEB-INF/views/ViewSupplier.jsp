@@ -171,8 +171,8 @@ section {
         <td>${x.supplierID}</td>
         <td>${x.supplierName}</td>
         <td>${x.supplierDescription}</td>
-        <td><a href="#">Edit</a></td>
-        <td><a href="#">Delete</a></td>
+        <td><a href="EditSupplier/${x.supplierID}">Edit</a></td>
+        <td><a href="deletesupplier/${x.supplierID}">Delete</a></td>
       </tr>
       </tbody>
       </c:forEach>

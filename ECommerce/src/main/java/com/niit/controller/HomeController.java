@@ -25,6 +25,13 @@ public class HomeController {
 		return mv;
 	}
 	
+	@RequestMapping("/Error")
+	public ModelAndView error()
+	{
+		ModelAndView mv=new ModelAndView("Error");
+		return mv;
+	}
+	
 	@RequestMapping("Signup")
 	public ModelAndView signup()
 	{
@@ -54,19 +61,5 @@ public class HomeController {
 		return mv;
 	}
 	
-	@RequestMapping("AddCategory")
-	public ModelAndView AddCategory()
-	{
-		ModelAndView mv=new ModelAndView("AddCategory");
-		return mv;
-	}
 	
-	
-	@RequestMapping("AddSupplier")
-	public ModelAndView AddSupplier()
-	{
-		ModelAndView mv=new ModelAndView("AddSupplier");
-		return mv;
-	}
-
 }

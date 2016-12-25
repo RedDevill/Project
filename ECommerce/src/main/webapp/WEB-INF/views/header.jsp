@@ -1,29 +1,41 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
+<%-- <%@page import="com.niit.model.User"%> --%>
 <html lang="en">
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    
-    <title>myClub | Home</title>
-    <meta name="description" content="This one page example has a fixed navbar and full page height sections. Each section is vertically centered on larger screens, and then stack responsively on smaller screens. Scrollspy is used to activate the current menu item. This layout also has a contact form example. Uses animate.css, FontAwesome, Google Fonts (Lato and Bitter) and Bootstrap." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Codeply">
+	<!--    *****************************   HEAD    ***************************  -->
 
+<head>
 
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="resources/bootstrap/css1/header.css" />
+  <title>Welcome</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   
-    
-    
-  </head>
- 
- 
-  <body >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
+   
+    <!-- link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
+    <link rel="stylesheet" href="resources/bootstrap/css1/styles.css">
+    <link rel="stylesheet" href="resources/bootstrap/css1/image.css"> -->
+	<link rel="stylesheet" href="resources/bootstrap/css1/header.css">
+</head>
+
+
+
+	<!--   ***************************    Nav Bar   *******************************-->
+	
+	
+	
+<body>
+	
+<body>
+
     <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -37,7 +49,7 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="index">Home</a></li>
+                <li class="active"><a href="index">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="About Us">About Us</a></li>
                 <!-- <li><a href="#section4"></a></li>
@@ -52,8 +64,16 @@
         		</div>
         		<button type="submit" class="btn btn-danger btn-default">Submit</button>
       		</form>
-                <li><a href="#" data-toggle="modal" data-target="#myModal"><i style="color:#1abc9c" class="fa fa-sign-in fa-lg"></i></a>
-                
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <% 	String username=(String)session.getAttribute("sessname");
+					out.print("Welcome "+ username);
+					//session.setAttribute("sessname",username); 
+				%> <span style="color:#1abc9c" class="glyphicon glyphicon-triangle-bottom"></span></a>
+        			<ul class="dropdown-menu">
+          				<li><a href="#">My Account</a></li>
+          				<li><a href="#"> MyCart</a></li>
+          				<li><a href="index">Log Out</a></li>
+        			</ul>
                 </li>
             </ul>
         </div>

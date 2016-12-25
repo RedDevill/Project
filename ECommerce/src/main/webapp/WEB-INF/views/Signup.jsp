@@ -24,7 +24,7 @@
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   
 
-   
+   	 <link rel="stylesheet" href="resources/bootstrap/css1/Signup.css" />
      <link rel="stylesheet" href="resources/bootstrap/css1/styles.css" />
      <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
     

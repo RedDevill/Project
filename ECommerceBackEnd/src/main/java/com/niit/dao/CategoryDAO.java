@@ -50,15 +50,51 @@ public class CategoryDAO {
 	}
 	
 	@Transactional
-	public void updateCategory(Category c)
+	public void updateCategory(String categoryID)
 	{
 		Session sess=getSession();
 		org.hibernate.Transaction tx=sess.beginTransaction();
+		Category c=sess.get(Category.class, categoryID);
 		sess.update(c);
 		tx.commit();
 		sess.close();
 	}
 	
+	
+	@Transactional
+	public void updateCategory1(Category category)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		sess.update(category);
+		tx.commit();
+		sess.close();
+	}
+	
+	
+	
+	@Transactional
+	public Category getCategoryByID(String categoryID)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		
+		Category c=sess.get(Category.class, categoryID);
+		return c ;
+	}
+	
+	
+	@Transactional
+	public void deleteCategory1(String categoryID)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		
+		Category c=sess.get(Category.class, categoryID);
+		sess.delete(c);
+		tx.commit();
+		sess.close();
+	}
 	@Transactional
 	public void deleteCategory(Category c)
 	{

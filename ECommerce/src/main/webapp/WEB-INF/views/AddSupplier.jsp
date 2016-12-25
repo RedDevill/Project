@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 	<!--    *****************************   HEAD    ***************************  -->
 
@@ -138,7 +140,7 @@
 	<div class="row">
       <div class="col-md-7">
         <div class="well well-sm">
-          <form class="form-horizontal" action="submit2" method="post">
+          <form:form class="form-horizontal" action="submit2" method="post">
           <fieldset>
             <legend class="text-center">Add Supplier</legend>
     
@@ -146,7 +148,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label text-left" for="id">Supplier ID :</label>
               <div class="col-md-8">
-                <input id="supplierID" name="supplierID" type="text" placeholder="Supplier ID" class="form-control">
+                <form:input id="supplierID" path="supplierID" type="text" placeholder="Supplier ID" class="form-control"/>
               </div>
             </div>
     
@@ -154,7 +156,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="name">Supplier NAME :</label>
               <div class="col-md-8">
-                <input id="supplierName" name="supplierName" type="text" placeholder="Supplier Name" class="form-control">
+                <form:input id="supplierName" path="supplierName" type="text" placeholder="Supplier Name" class="form-control"/>
               </div>
             </div>
     
@@ -162,7 +164,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="message">Supplier Description :</label>
               <div class="col-md-8">
-                <textarea class="form-control" id="supplierDescription" name="supplierDescription" placeholder="Enter description here..." rows="5"></textarea>
+                <form:textarea class="form-control" id="supplierDescription" path="supplierDescription" placeholder="Enter description here..." rows="5"></form:textarea>
               </div>
             </div>
     
@@ -173,7 +175,7 @@
               </div>
             </div>
           </fieldset>
-          </form>
+         </form:form>
         </div>
       </div>
 	</div>

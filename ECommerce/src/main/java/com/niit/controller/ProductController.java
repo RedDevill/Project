@@ -6,12 +6,14 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
 import com.niit.dao.ProductDAO;
 import com.niit.model.Product;
 
@@ -54,6 +56,18 @@ public class ProductController {
 	{
 		productDAO.addProduct(product);
 		return new ModelAndView("redirect:/ViewProduct");
+	}
+	
+	@RequestMapping("/product")
+	public String product(Model model)
+	{
+		List<Product> list=productDAO.getProducts();
+		Gson g=new Gson();
+		String jsonlist=g.toJson(list);
+		System.out.println("JSON DATA"+jsonlist);
+		model.addAttribute("list",jsonlist);
+		
+		return "product";
 	}
 	
 	@RequestMapping("/AddProduct")
@@ -101,7 +115,6 @@ public class ProductController {
 	public ModelAndView delete(@PathVariable String productID)
 	{
 		productDAO.deleteProduct1(productID);
-		//System.out.println("AFTER UPDATING "+product);
 		return new ModelAndView("redirect:/ViewProduct");
 		
 	}

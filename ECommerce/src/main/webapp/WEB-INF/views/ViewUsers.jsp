@@ -5,7 +5,7 @@
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
-  <title>Add Category</title>
+  <title>Admin | Users</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -182,6 +182,7 @@ section {
         <td>${x.password}</td>
         <td>${x.dateofbirth}</td>
         <td>${x.gender}</td>
+        <td><a href="deleteuser/${x.username}">Delete</a></td>
       </tr>
           </tbody>
       </c:forEach>

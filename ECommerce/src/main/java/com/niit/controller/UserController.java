@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -69,6 +70,8 @@ public class UserController {
 			u.setPassword(password);
 			u.setDateofbirth(dateofbirth);
 			u.setGender(gender);
+			u.setEnabled(true);
+			u.setRole("role_user");
 			userDAO.addUser(u);
 			mv.addObject("user", u);
 			return mv;
@@ -84,5 +87,14 @@ public class UserController {
 		System.out.println("Product list"+list);
 		mv.addObject("listUsers",list);
 		return mv;
+	}
+	
+	@RequestMapping("/deleteuser/{username}")
+	public ModelAndView delete(@PathVariable String username)
+	{
+		userDAO.deleteUser1(username);
+		//System.out.println("AFTER UPDATING "+product);
+		return new ModelAndView("redirect:/ViewUsers");
+		
 	}
 }

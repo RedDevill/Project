@@ -185,7 +185,7 @@
                             <div class="panel-body">
                                  <img src="resources/images/mens.jpg" class="img-circle center-block img-responsive"alt="MEN's" style="width:200px;height:200px">
         						<br>  						
-        						<a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
+        						<a href="product" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
                                 <hr>
                             </div>
                         </div>
@@ -201,7 +201,7 @@
                             <div class="panel-body">
                                 <img src="resources/images/womens.jpg" class="img-circle center-block img-responsive" alt="WOMEN's" style="width:200px;height:200px">
         						<br>
-        						<a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
+        						<a href="product" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
                                	<hr>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                             <div class="panel-body">
                                 <img src="resources/images/kids.jpg" class="img-circle center-block img-responsive" alt="KIDs" style="width:200px;height:200px">
                                 <br>
-                                <a href="#" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
+                                <a href="product" class="btn btn-danger btn-lg btn-huge lato">Shop Now</a>
                                 <hr>
                             </div>
                         </div>

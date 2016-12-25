@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false" %>
 	<!--    *****************************   HEAD    ***************************  -->
 
 <head>
-<c:url value="/resources/bootstrap/css1" var="a"></c:url>
   <title>Edit Product</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<c:url value="/resources/images" var="y"/>
+<c:url value="/resources/bootstrap/css1" var="a"/>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,10 +20,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
-
- 
+    
+    <link rel="stylesheet" href="${a}/Signup.css" />
     <link rel="stylesheet" href="${a}/styles.css" />
-    <link rel="stylesheet" href="css1/footer-distributed-with-address-and-phones.css" />
+    <link rel="stylesheet" href="${a}/footer-distributed-with-address-and-phones.css" />
+
+
 </head>
 
 
@@ -31,6 +35,7 @@
 	
 	
 <body>
+<%-- <jsp:include page="header.jsp"></jsp:include> --%>
 
 <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
@@ -41,7 +46,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-danger" href="#"><img src="resources/images/myclub-logo2.png" alt="myClub"></a>
+            <a class="navbar-brand text-danger" href="#"><img src="${y}/myclub-logo2.png" alt="myClub"></a>
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
@@ -134,14 +139,14 @@
 <br>
 <br>
 <br>
-<div class="container"style="margin-top:70px;">
+	 <div class="container"style="margin-top:70px;">
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-md-6 well well-sm">
             <legend><a href="http://www.jquery2dotnet.com"><i style="color:#f44d3c"	 class="glyphicon glyphicon-th-list"></i></a> ADD Product Details</legend>
             <form:form action="/ECommerce/editsave" method="post">
             <div class="row">
             <div class="form-group">
-              <label class="col-md-5 control-label text-left" for="id">Product ID :</label>
+              <!-- <label class="col-md-5 control-label text-left" for="id">Product ID :</label> -->
               <div class="col-md-6">
                 <form:hidden id="productID" path="productID" placeholder="Product ID" class="form-control"/>
               </div>
@@ -200,8 +205,9 @@
                     </select>
               </div>
             </div>
-            <br />
-            <br />
+            <br>
+            <br>
+
     		<div class="form-group">
               <div class="col-md-12 text-center">
                 <button id="submit1" type="submit" class="btn btn-danger btn-primary btn-lg ">UPDATE</button>
@@ -212,14 +218,12 @@
         
     </div>
     </div>
-    </div>
-<br>
-<br>
+
 <footer class="footer-distributed" id="footer">
 
 			<div class="footer-left">
 
-			<img class=" img-responsive" style="width:200px;height:150px; margin-left:20px" src="resources/images/myclub-logo1.png" alt="myClub logo">
+			<img class=" img-responsive" style="width:200px;height:150px; margin-left:20px" src="${y}/myclub-logo1.png" alt="myClub logo">
 				<br>
 				<br>
 				<p class="nav">
@@ -272,5 +276,6 @@
 
 			</div>
 
-		</footer></body>
+		</footer>
+</body>
 </html>

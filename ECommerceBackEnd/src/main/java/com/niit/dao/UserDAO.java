@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.model.Category;
 import com.niit.model.Product;
 import com.niit.model.User;
 
@@ -69,4 +70,26 @@ public class UserDAO {
 		sess.close();
 	}
 
+	public void deleteUser(String username)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		
+		User u=sess.get(User.class, username);
+		sess.delete(u);
+		tx.commit();
+		sess.close();
+	}
+	
+	@Transactional
+	public void deleteUser1(String username)
+	{
+		Session sess=getSession();
+		org.hibernate.Transaction tx=sess.beginTransaction();
+		
+		User u =sess.get(User.class, username);
+		sess.delete(u);
+		tx.commit();
+		sess.close();
+	}
 }
