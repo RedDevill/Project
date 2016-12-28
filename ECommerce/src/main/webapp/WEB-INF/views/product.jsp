@@ -141,7 +141,7 @@
     <td>{{x.quantity}}</td>
     <td>{{x.brand}}</td>
     <td>{{x.price}}</td>
-    <td><a href="#"><i style="color:#1abc9c" class="fa fa-exclamation" aria-hidden="true"></i></a></td>
+    <td><a href="Productdetail/{{x.productID}}"><i style="color:#1abc9c" class="fa fa-exclamation" aria-hidden="true"></i></a></td>
  
      </tr>
       

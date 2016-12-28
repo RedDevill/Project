@@ -202,6 +202,11 @@
                     </select>
               </div>
             </div>
+            <div class="form-group">
+            <form action="savefile" method="post" enctype="multipart/form-data">  
+				<label class="col-md-5 control-label text-left" for="id">Select File : </label><input type="file" name="image"/>  
+            </form>
+            </div>
             <br />
             <br />
     		<div class="form-group">
