@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@page isELIgnored="false" %>
 <html lang="en">
 
@@ -78,21 +77,7 @@
           				<li><a href="index">Log Out</a></li>
         			</ul>
                 </li> --%>
-            <sec:authorize access="isAuthenticated()">
-               <ul class="nav navbar-nav navbar-right">
-               		<li>
-               			<a href="logout">Sign Out</a>
-                	</li>
-                </ul>
-            </sec:authorize>
-            
-            
-            <sec:authorize access="isAnonymous()">
-               <ul class="nav navbar-nav navbar-right">
-               		<li><a href="#" data-toggle="modal" data-target="#myModal"><i style="color:#1abc9c" class="fa fa-sign-in fa-lg"></i></a></li>
-                </ul>
-            </sec:authorize>
-            
+                
             <sec:authorize access="hasRole('ADMIN')">
                 <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -160,15 +145,6 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     
     <script src="js/scripts.js"></script>
-
-@Override
-	protected void configure(HttpSecurity http)throws exception{
-			http.authorizeRequests()
-			.antMatchers("/ProductAdmin**").access("hasRole('ADMIN')")
-			.and()
-			.formLogin()
-			.loginPage("/Login").and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).and().csrf().disable();
-		}
 
 </body>
 </html>

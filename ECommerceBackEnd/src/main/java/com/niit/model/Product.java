@@ -2,8 +2,10 @@ package com.niit.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 @Component
 @Entity
@@ -17,8 +19,17 @@ public class Product {
 	private String price;
 	private String supplier;
 	private String category;
+	@Transient
+	private MultipartFile file;
 	
 	
+
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 	public String getQuantity() {
 		return quantity;
 	}

@@ -47,6 +47,8 @@ public class HomeController {
 		return mv;
 	}
 	
+	
+	
 	@RequestMapping("Contact Us")
 	public ModelAndView ContactUs()
 	{
@@ -60,6 +62,11 @@ public class HomeController {
 		ModelAndView mv=new ModelAndView("Admin");
 		return mv;
 	}
-	
+	@RequestMapping("Cart")
+	public ModelAndView Cart()
+	{
+		ModelAndView mv=new ModelAndView("Cart");
+		return mv;
+	}
 	
 }

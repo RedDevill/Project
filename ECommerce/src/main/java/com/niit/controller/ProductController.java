@@ -1,6 +1,7 @@
 package com.niit.controller;
 
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
 
@@ -63,31 +64,34 @@ public class ProductController {
 		return mv;
 	}*/
 	
-	@RequestMapping(value="/savefile",method=RequestMethod.POST)  
-	public ModelAndView upload(@RequestParam CommonsMultipartFile file,HttpSession session){  
-	        String path=session.getServletContext().getRealPath("/");  
-	        String filename=file.getOriginalFilename();  
+	@RequestMapping(value="/submit1",method=RequestMethod.POST)  
+	public ModelAndView upload(@ModelAttribute("p") Product product){  
+	        String path ="C:/Users/ahlaw/Downloads/Compressed/Project-master/Project-master/ECommerce/src/main/webapp/resources/images/" +product.getProductID()+ ".jpg";  
+	       /* String filename=file.getOriginalFilename();  
 	          
-	        System.out.println(path+" "+filename);  
+	        System.out.println(path+" "+filename);*/  
 	        try{  
-	        byte barr[]=file.getBytes();  
-	          
+	        byte barr[]=product.getFile().getBytes();  
+	        productDAO.addProduct(product); 
+	        System.out.println("Data Saved");
+	        System.out.println(path);
+	        File f = new File(path);
 	        BufferedOutputStream bout=new BufferedOutputStream(  
-	                 new FileOutputStream(path+"/"+filename));  
+	                 new FileOutputStream(f));  
 	        bout.write(barr);  
 	        bout.flush();  
 	        bout.close();  
 	          
 	        }catch(Exception e){System.out.println(e);}  
-	        return new ModelAndView("upload-success","filename",path+"/"+filename);  
+	        return new ModelAndView("redirect:/ViewProduct");  
 	    }  
-	
+	/*
 	@RequestMapping("/submit1")
 	public ModelAndView add(@ModelAttribute("p") Product product)
 	{
 		productDAO.addProduct(product);
 		return new ModelAndView("redirect:/ViewProduct");
-	}
+	}*/
 	
 	@RequestMapping("/product")
 	public String product(Model model)

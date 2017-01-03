@@ -116,7 +116,7 @@
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane active" id="pic-1"><img src="${y}/${productdetail.productID}.jpg" alt="image"/></div>
 						<!--   <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
 						 <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
@@ -157,8 +157,13 @@
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5>
+						
+						<a href="/Ecommerce/addtocart">ADDTOCART</a>
+						
+						<!-- <a href="Cart" class="add-to-cart btn btn-default">add to cart</a> -->
 						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">add to cart</button>
+						
+							<a href="/ECommerce/Cart/${productdetail.productID}" class="add-to-cart btn btn-default">add to cart</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>

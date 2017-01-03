@@ -43,8 +43,8 @@
 	
 	
 <body>
-
-<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+<jsp:include page="header.jsp"></jsp:include>
+<!-- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -74,7 +74,7 @@
         </div>
     </div>
 </nav>
-
+ -->
 <br>
 <br>
 <section class="container-fluid section3" id="section3">
@@ -110,8 +110,8 @@
             
 </section>
 
-
-<footer class="footer-distributed" id="footer">
+<jsp:include page="footer.jsp"></jsp:include>
+<!-- <footer class="footer-distributed" id="footer">
 
 			<div class="footer-left">
 
@@ -205,12 +205,12 @@
         </div>
     </div>
 </div>
-    <!--scripts loaded here-->
+    scripts loaded here
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     
     <script src="js/scripts.js"></script>
-    
+     -->
 </body>
 </html>

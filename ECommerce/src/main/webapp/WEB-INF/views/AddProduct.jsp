@@ -140,7 +140,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-md-6 well well-sm">
             <legend><a href="http://www.jquery2dotnet.com"><i style="color:#f44d3c"	 class="glyphicon glyphicon-th-list"></i></a> ADD Product Details</legend>
-            <form:form action="submit1" method="post" class="form" role="form">
+            <form:form action="submit1" method="post" class="form" role="form" enctype="multipart/form-data">
             <div class="row">
             <div class="form-group">
               <label class="col-md-5 control-label text-left" for="id">Product ID :</label>
@@ -202,9 +202,8 @@
                     </select>
               </div>
             </div>
-            <div class="form-group">
-            <form action="savefile" method="post" enctype="multipart/form-data">  
-				<label class="col-md-5 control-label text-left" for="id">Select File : </label><input type="file" name="image"/>  
+            <div class="form-group">  
+				<label class="col-md-5 control-label text-left" for="id">Select File : </label><input type="file" name="file"/>  
             </form>
             </div>
             <br />
