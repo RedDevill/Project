@@ -45,7 +45,8 @@
 	
 <body>
 
-    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -54,25 +55,44 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-danger" href="index"><img src="${y}/myclub-logo2.png" alt="myClub"></a>
+            <a class="navbar-brand text-danger" href="#"><img src="resources/images/myclub-logo2.png" alt="myClub"></a>
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="index">Home</a></li>
-                <li><a href="product">Shop</a></li>
-                <li><a href="About Us">About Us</a></li>
-                <!-- <li><a href="#section4"></a></li>
-                <li><a href="#section5"></a></li>
-                <li><a href="#section6"></a></li> -->
-                <li>&nbsp;</li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            <form class="navbar-form navbar-left" role="search">
-        		<div class="form-group">
-          		<input type="text" class="form-control" placeholder="Search">
-        		</div>
-        		<button type="submit" class="btn btn-danger btn-default">Submit</button>
-      		</form>
+                <li><a href="index">Home</a></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Users <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="ViewUsers">View Users</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="AddCategory">Add Category</a></li>
+							<li><a href="ViewCategory">View Category</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="AddProduct">Add Product</a></li>
+							<li><a href="ViewProduct">View Product</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="AddSupplier">Add Supplier</a></li>
+							<li><a href="ViewSupplier">View Supplier</a></li>
+						</ul></li>
+					<li>&nbsp;</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-danger btn-default">Submit</button>
+					</form>
+    
       		
             <%-- <sec:authorize access="isAuthenticated()">
                <ul class="nav navbar-nav navbar-right">
@@ -93,9 +113,6 @@
                 <ul class="nav navbar-nav navbar-right">
                 <li>
                 	<a href="">Welcome <b> <sec:authentication property="principal.username"/></b></a>
-                </li>
-                <li>
-                	<a href="Admin"><i style="color:#f44d3c" class="fa fa-lock" aria-hidden="true"></i> Admin</a>
                 </li>
                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <span style="color:#f44d3c" class="glyphicon glyphicon-triangle-bottom"></span></a>

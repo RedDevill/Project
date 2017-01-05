@@ -92,4 +92,20 @@ public class UserDAO {
 		tx.commit();
 		sess.close();
 	}
+	
+	@Transactional
+	public User getUserByUsername(String username)
+	{
+		 User u=null;
+		Session sess=getSession();
+	    Transaction tx=sess.beginTransaction();
+		String hql="from User where username=:username";
+		Query q = sess.createQuery(hql);
+		q.setParameter("username", username);
+		List<User> list=q.list();
+		if(list.size()>0){
+		 u=(User)list.get(0);
+		}
+		return u;
+	}
 }

@@ -14,9 +14,9 @@ public class Product {
 	private String productID;
 	private String productName;
 	private String productDescription;
-	private String quantity;
+	private int quantity;
 	private String brand;
-	private String price;
+	private int price;
 	private String supplier;
 	private String category;
 	@Transient
@@ -30,10 +30,10 @@ public class Product {
 	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	public String getBrand() {
@@ -42,10 +42,10 @@ public class Product {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public String getSupplier() {

@@ -35,8 +35,7 @@
 <style type="text/css">
 html, body {
 	height: 110%;
-	background: center no-repeat fixed
-		url('http://i41.tinypic.com/20zxpwl.jpg');
+	background: center no-repeat fixed url('http://i41.tinypic.com/20zxpwl.jpg');
 	background-size: cover;
 	color:#444;
     font-family: 'Lato', sans-serif;
@@ -51,7 +50,8 @@ html, body {
 	
 	
 <body>
-
+<jsp:include page="header1.jsp"></jsp:include>
+<!-- 
 <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -154,7 +154,7 @@ html, body {
 		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 	<script src="js/scripts.js"></script>
-
+ -->
 <br>
 <section>
 <div style="margin-left:200px; margin-top:100px;">

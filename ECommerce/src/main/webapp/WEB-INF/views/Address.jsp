@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
-
+	
+	   <link rel="stylesheet" href="${a }/Signup.css" />
    <!--  <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="resources/bootstrap/css1/image.css" />
     <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
@@ -26,17 +27,13 @@
  
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-
-<h2>Billing Address</h2>
 <br>
 <br>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <form class="form-horizontal" role="form">
+  <div class="row" style="margin-top:50px;">
+   <div class="col-md-4 col-md-offset-1">
+            <legend ><a  href="http://www.jquery2dotnet.com"><i style="color:#f44d3c" class="glyphicon glyphicon-globe"></i></a> Billing Address </legend>
+            <form action="" method="post" class="form" role="form">
         <fieldset>
-
-          <!-- Form Name -->
-          <legend>Address Details</legend>
 
           <!-- Text input-->
           <div class="form-group">
@@ -89,7 +86,7 @@
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
                 <button type="submit" class="btn btn-primary">Save</button>
-                <input type="submit" class="btn btn-default" name="_eventId_event2">Next
+               <a href="/ECommerce/ShippingAddress"  type="button" class="btn btn-danger">  Next <span class="glyphicon glyphicon-play"></span></a> 
               </div>
             </div>
           </div>

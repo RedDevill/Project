@@ -24,8 +24,9 @@
   </head>
 
   <body>
+  <jsp:include page="header.jsp"></jsp:include>
 
-<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+<%-- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -104,7 +105,7 @@
 	<script
 		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script> --%>
 <br>
 <br>
 <br>
@@ -158,12 +159,13 @@
 							<span class="color blue"></span>
 						</h5>
 						
-						<a href="/Ecommerce/addtocart">ADDTOCART</a>
+						<!-- <a href="/Ecommerce/addtocart">ADDTOCART</a> -->
 						
 						<!-- <a href="Cart" class="add-to-cart btn btn-default">add to cart</a> -->
 						<div class="action">
-						
-							<a href="/ECommerce/Cart/${productdetail.productID}" class="add-to-cart btn btn-default">add to cart</a>
+						<%-- <a href="/ECommerce/addtocart">ADDTOCART</a>
+						<a href="${flowExecutionUrl}&_eventId=next">cart</a> --%>
+							<a href="/ECommerce/AddToCart/${productdetail.productID}" class="add-to-cart btn btn-default">add to cart</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>

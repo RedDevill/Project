@@ -7,12 +7,12 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.model.Item;
+import com.niit.model.Cart;
 
 @Repository
 @Transactional
 @EnableTransactionManagement
-public class ItemDAO {
+public class CartDAO {
 	
 	@Autowired
 	SessionFactory sessionFactory;
@@ -23,13 +23,14 @@ public class ItemDAO {
 	}
 	
 	@Transactional
-	public void addItem(Item i)
+	public void addCart(Cart c)
 	{
 		Session sess=getSession();
 		org.hibernate.Transaction tx=sess.beginTransaction();
-		sess.save(i);
+		sess.save(c);
 		tx.commit();
 		sess.close();
 	}
+
 
 }

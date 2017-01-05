@@ -21,7 +21,7 @@ import com.niit.model.Product;
 public class ProductDAO {
 	
 	
-	@Autowired
+	   @Autowired
 	  SessionFactory sessionFactory;
 		
 		public Session getSession()
@@ -34,7 +34,7 @@ public class ProductDAO {
 			Session sess=getSession();
 			String hql="from Product";
 			Query q = sess.createQuery(hql);
-			List<Product> listProduct =q.list();
+			List<Product> listProduct = q.list();
 			return listProduct;
 		}
 	

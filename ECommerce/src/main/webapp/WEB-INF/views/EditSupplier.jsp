@@ -34,9 +34,9 @@
 	
 	
 <body>
-<%-- <jsp:include page="header.jsp"></jsp:include> --%>
+ <jsp:include page="header1.jsp"></jsp:include>
 
-<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+<%-- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -133,7 +133,7 @@
 	<script
 		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script> --%>
 
 <br>
 <br>

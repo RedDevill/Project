@@ -71,7 +71,9 @@ html,body {
 	
 	
 <body>
- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+
+<jsp:include page="header.jsp"></jsp:include>
+ <!-- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -88,9 +90,9 @@ html,body {
                 <li><a href="#section2">Shop</a></li>
                 <li><a href="About Us">About Us</a></li>
                 <li class="active"><a href="Signup">Sign Up</a></li>
-                <!-- <li><a href="#section4"></a></li>
+                <li><a href="#section4"></a></li>
                 <li><a href="#section5"></a></li>
-                <li><a href="#section6"></a></li> -->
+                <li><a href="#section6"></a></li>
                 <li>&nbsp;</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -105,7 +107,7 @@ html,body {
         </div>
     </div>
 </nav>
-
+ -->
 <br>
 
 <div class="container"style="margin-top:100px;">

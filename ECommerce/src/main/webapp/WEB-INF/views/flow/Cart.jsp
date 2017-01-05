@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page isELIgnored="false" %>
 <html lang="en">
 
 
@@ -14,8 +12,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
-	<c:url value="/resources/images" var="y"/>
-	<c:url value="/resources/bootstrap/css1" var="a"/>
+
     <link rel="stylesheet" href="resources/bootstrap/css1/style.css" />
     <link rel="stylesheet" href="resources/bootstrap/css1/image.css" />
     <link rel="stylesheet" href="resources/bootstrap/css1/footer-distributed-with-address-and-phones.css" />
@@ -42,7 +39,7 @@
                     <tr>
                         <td class="col-sm-8 col-md-6">
                         <div class="media">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="${y}/${productdetail.productID}.jpg" alt="image" style="width: 72px; height: 72px;"> </a>
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src=""${y}/${productdetail.productID}.jpg" alt="image" style="width: 72px; height: 72px;"> </a>
                             <div class="media-body">
                                 <h4 class="media-heading"><a href="#">${productdetail.productName}</a></h4>
                                 <h5 class="media-heading"> by <a href="#">${productdetail.brand}</a></h5>
@@ -109,10 +106,9 @@
                             <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
                         </button></td>
                         <td>
-                    <!--  <button id="checkout" type="submit" name="_eventId_page1">Checkout</button>
-                           -->
-                          <a href="/ECommerce/Address" type="button" class="btn btn-default"> Proceed <span class="glyphicon glyphicon-play"></span></a> 
-                           
+                     <button id="checkout" type="submit" name="_eventId_page1">Checkout</button>
+                          <!--   Checkout <span class="glyphicon glyphicon-play"></span> 
+                            -->
                         </td>
                     </tr>
                 </tbody>

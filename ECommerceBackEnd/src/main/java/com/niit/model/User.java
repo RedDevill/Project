@@ -2,6 +2,7 @@ package com.niit.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,15 @@ public class User {
 	private String gender;
 	private Boolean enabled;
 	private String role;
+	@OneToOne
+	private Cart cart;
 	
+	public Cart getCart() {
+		return cart;
+	}
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
 	public Boolean getEnabled() {
 		return enabled;
 	}

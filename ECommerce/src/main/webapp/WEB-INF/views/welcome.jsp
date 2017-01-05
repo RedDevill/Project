@@ -35,8 +35,8 @@
 <body>
 	
 <body>
-
-    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+<jsp:include page="header.jsp"></jsp:include>
+   <%--  <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -80,7 +80,7 @@
     </div>
 </nav>
 
- 
+  --%>
   <!--  *********************  Carousel section  ***************************  -->
     
 <section class="container-fluid" id="section1">
@@ -105,6 +105,10 @@
       <div class="slide-1"></div>
       <div class="hero">
         <hgroup>
+        	<% 	String username=(String)session.getAttribute("sessname");
+					out.print("Welcome "+ username);
+					//session.setAttribute("sessname",username); 
+				%>
             <h1><%out.print("Welcome "+ username); %>  to </h1>
             <br>        
             <h3>Your one stop for all your sports clubs needs</h3>

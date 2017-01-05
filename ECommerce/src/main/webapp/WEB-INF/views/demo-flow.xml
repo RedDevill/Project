@@ -4,8 +4,8 @@
 http://www.springframework.org/schema/webflow/spring-webflow.xsd">
 
 	
-	<view-state id="addtocart" view="Cart.jsp">
-	   <transition on="page1" to="Address"/>
+	<view-state id="addtocart" view="flow/Cart.jsp">
+	   <transition on="next" to="Address"/>
 	</view-state>
 	
 	

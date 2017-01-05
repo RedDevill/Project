@@ -25,7 +25,9 @@
   
   
   <body >
-    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+  
+  <jsp:include page="header.jsp"></jsp:include>
+   <!--  <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -42,9 +44,9 @@
                 <li><a href="#section2">Shop</a></li>
                 <li><a href="#section3">About Us</a></li>
                 <li><a href="Admin">Admin</a></li>
-                <!-- <li><a href="#section4"></a></li>
+                <li><a href="#section4"></a></li>
                 <li><a href="#section5"></a></li>
-                <li><a href="#section6"></a></li> -->
+                <li><a href="#section6"></a></li>
                 <li>&nbsp;</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -58,7 +60,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <section class="container-fluid" id="section1">
  
@@ -87,7 +89,7 @@
             <h3>Your one stop for all your sports clubs needs</h3>
             <br>
         </hgroup>
-        <a href="#" class="btn btn-hero btn-lg btn-huge " data-toggle="modal" data-target="#myModal">Get Started Now</a>
+       <!--  <a href="#" class="btn btn-hero btn-lg btn-huge " data-toggle="modal" data-target="#myModal">Get Started Now</a> -->
       </div>
     </div>
     

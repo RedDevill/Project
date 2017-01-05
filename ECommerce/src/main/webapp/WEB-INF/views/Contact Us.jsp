@@ -38,8 +38,8 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+<jsp:include page="header.jsp"></jsp:include>
+<!-- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -68,7 +68,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <br>
 <br>

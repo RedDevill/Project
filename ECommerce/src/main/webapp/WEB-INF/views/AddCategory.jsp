@@ -31,8 +31,8 @@
 	
 	
 <body>
-
-<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+<jsp:include page="header1.jsp"></jsp:include>
+<%-- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 	</nav>
-
+ --%>
 	<div id="myModal" class="modal fade" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
