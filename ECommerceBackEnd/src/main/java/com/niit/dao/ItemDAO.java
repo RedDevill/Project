@@ -1,5 +1,8 @@
 package com.niit.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.model.Item;
+import com.niit.model.Product;
 
 @Repository
 @Transactional
@@ -32,4 +36,12 @@ public class ItemDAO {
 		sess.close();
 	}
 
+	public List<Item> getItem()
+	{
+		Session sess=getSession();
+		String hql="from Item";
+		Query q = sess.createQuery(hql);
+		List<Item> listItem = q.list();
+		return listItem;
+	}
 }

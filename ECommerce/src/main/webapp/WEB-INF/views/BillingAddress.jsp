@@ -31,15 +31,15 @@
 <br>
   <div class="row" style="margin-top:50px;">
    <div class="col-md-4 col-md-offset-1">
-            <legend ><a  href="http://www.jquery2dotnet.com"><i style="color:#f44d3c" class="glyphicon glyphicon-globe"></i></a> Shipping Address </legend>
-            <form action="save" method="post" class="form" role="form">
+            <legend ><a  href="http://www.jquery2dotnet.com"><i style="color:#f44d3c" class="glyphicon glyphicon-globe"></i></a> Billing Address </legend>
+            <form action="BillingAddress" method="post" class="form" role="form">
         <fieldset>
 
           <!-- Text input-->
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Line 1</label>
             <div class="col-sm-10">
-              <input name="line1" type="text" placeholder="Address Line 1" class="form-control">
+              <input type="text" placeholder="Address Line 1" class="form-control">
             </div>
           </div>
 
@@ -47,7 +47,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Line 2</label>
             <div class="col-sm-10">
-              <input name="line2" type="text" placeholder="Address Line 2" class="form-control">
+              <input type="text" placeholder="Address Line 2" class="form-control">
             </div>
           </div>
 
@@ -55,7 +55,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">City</label>
             <div class="col-sm-10">
-              <input name="city" type="text" placeholder="City" class="form-control">
+              <input type="text" placeholder="City" class="form-control">
             </div>
           </div>
 
@@ -63,12 +63,12 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">State</label>
             <div class="col-sm-4">
-              <input name="state" type="text" placeholder="State" class="form-control">
+              <input type="text" placeholder="State" class="form-control">
             </div>
 
             <label class="col-sm-2 control-label" for="textinput">Postcode</label>
             <div class="col-sm-4">
-              <input name="zipcode" type="text" placeholder="Post Code" class="form-control">
+              <input type="text" placeholder="Post Code" class="form-control">
             </div>
           </div>
 
@@ -78,7 +78,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Country</label>
             <div class="col-sm-10">
-              <input name="country" type="text" placeholder="Country" class="form-control">
+              <input type="text" placeholder="Country" class="form-control">
             </div>
           </div>
 
@@ -86,11 +86,11 @@
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
               <!-- <div class="form-actions">
-					<input type="submit" name="_eventId_submitShippingAddress" value="Save" class="btn btn-md btn-danger"> Next <span class="glyphicon glyphicon-play"></span></a>
+					<input type="submit" name="_eventId_submitBillingAddress" value="Save" class="btn btn-md btn-danger"> Next <span class="glyphicon glyphicon-play"></span></a>
 						<input type="submit" name="_eventId_cancel" class="btn btn-md btn-primary">
 				</div> -->
-                <button type="submit" class="btn btn-primary">Back</button>
-               <input  type="submit" value="next" class="btn btn-danger">  Next <span class="glyphicon glyphicon-play"></span></a> 
+                <button type="submit" class="btn btn-primary">Save</button>
+               <a href="/ECommerce/ShippingAddress"  type="button" class="btn btn-danger">  Next <span class="glyphicon glyphicon-play"></span></a> 
               </div>
             </div>
           </div>

@@ -19,15 +19,28 @@ public class Item {
 	
 	private int quantity;
 	private int itemTotal;
-	@OneToOne
-	private Cart cart;
 	
-	public Cart getCart() {
-		return cart;
+	public Item()
+	{
+		
 	}
-	public void setCart(Cart cart) {
-		this.cart = cart;
+	
+	
+	public Item(int id, Product product, int quantity, int itemTotal, Cart cart) {
+		super();
+		this.id = id;
+		this.product = product;
+		this.quantity = quantity;
+		this.itemTotal = itemTotal;
+		
 	}
+	
+	@Override
+	public String toString() {
+		return "Item [id=" + id + ", product=" + product + ", quantity=" + quantity + ", itemTotal=" + itemTotal + "]";
+	}
+
+
 	public int getId() {
 		return id;
 	}

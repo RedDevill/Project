@@ -23,8 +23,8 @@ public class UserController {
 	
 	@Autowired
 	UserDAO userDAO;
-/*	
-	@RequestMapping("/login")
+	
+	@RequestMapping("/login1")
 	public ModelAndView validateUser(HttpServletRequest request){
 		System.out.println("CALLING VALIDATE METHOD");
 		HttpSession session = request.getSession();
@@ -35,7 +35,7 @@ public class UserController {
 		
 		System.out.println("Welcome "+ username);
 		session.setAttribute("sessname",username); 
-		 
+		 System.out.println(session.getAttribute("sessname"));
 		if(x){
 			System.out.println("welcome page");
 			return new ModelAndView("welcome");
@@ -44,8 +44,7 @@ public class UserController {
 			System.out.println("error page");
 			return new ModelAndView("Error");
 		}
-		
-	}*/
+	}
 	
 	@RequestMapping("/logout")
     public String logout(HttpSession session ) {

@@ -51,7 +51,7 @@ html,body {
                 <h2 class="text-center"><img style="width:100px;height:100px" src="${y}/user.png" class="img-circle"><br>Login</h2>
             </div>
             <div class="modal-body row"><br>
-                <form role="form" method="post" action="login" accept-charset="UTF-8" class=" form col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+                <form role="form" method="post" action="login1" accept-charset="UTF-8" class=" form col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
                     <div class="form-group">
                         <input type="text" class="form-control input-lg" name="username" placeholder="Username / Email" required>
                     </div>

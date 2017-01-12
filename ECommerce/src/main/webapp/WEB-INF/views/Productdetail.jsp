@@ -114,6 +114,7 @@
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
+				<form action="/ECommerce/Cart/${productdetail.productID}">
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
@@ -145,6 +146,7 @@
 							<span class="review-no">41 reviews</span>
 						</div>
 						<p class="product-description">${productdetail.productDescription}</p>
+						
 						<h4 class="price">current price: <span>${productdetail.price}</span></h4>
 						<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
 						<h5 class="sizes">sizes:
@@ -158,17 +160,24 @@
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5>
-						
+						<!-- <label class="col-sm-2 control-label" for="textinput">Quantity</label> -->
+           				
+              				<input type="text" name="qty" placeholder="Quantity" class="col-sm-4 form-control">
+          				
+						<br>
+						<br>
+						<br>
 						<!-- <a href="/Ecommerce/addtocart">ADDTOCART</a> -->
 						
 						<!-- <a href="Cart" class="add-to-cart btn btn-default">add to cart</a> -->
 						<div class="action">
 						<%-- <a href="/ECommerce/addtocart">ADDTOCART</a>
 						<a href="${flowExecutionUrl}&_eventId=next">cart</a> --%>
-							<a href="/ECommerce/AddToCart/${productdetail.productID}" class="add-to-cart btn btn-default">add to cart</a>
+							<input type="submit" class="like btn btn-danger" value="add-to-cart">
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>

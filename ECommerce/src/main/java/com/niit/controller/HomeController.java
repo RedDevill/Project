@@ -69,17 +69,11 @@ public class HomeController {
 		ModelAndView mv=new ModelAndView("Admin");
 		return mv;
 	}
-	@RequestMapping("/Cart")
-	public ModelAndView Cart()
-	{
-		ModelAndView mv=new ModelAndView("Cart");
-		return mv;
-	}
 	
-	@RequestMapping("/Address")
+	@RequestMapping("/BillingAddress")
 	public ModelAndView address()
 	{
-		ModelAndView mv=new ModelAndView("Address");
+		ModelAndView mv=new ModelAndView("BillingAddress");
 		return mv;
 	}
 	@RequestMapping("/ShippingAddress")
@@ -100,5 +94,6 @@ public class HomeController {
 	{
 		ModelAndView mv=new ModelAndView("Thankyou");
 		return mv;
+	
 	}
 }

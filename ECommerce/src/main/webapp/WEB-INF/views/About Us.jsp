@@ -44,37 +44,6 @@
 	
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<!-- <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand text-danger" href="#"><img src="resources/images/myclub-logo2.png" alt="myClub"></a>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-collapsible">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="index">Home</a></li>
-                <li><a href="#section2">Shop</a></li>
-                <li class="active"><a href="#section3">About Us</a></li>
-                <li>&nbsp;</li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-           	 <form class="navbar-form navbar-left" role="search">
-        		<div class="form-group">
-          		<input type="text" class="form-control" placeholder="Search">
-        		</div>
-        		<button type="submit" class="btn btn-danger btn-default">Submit</button>
-      		</form>
-                <li><a href="#" data-toggle="modal" data-target="#myModal"><i style="color:#1abc9c" class="fa fa-sign-in fa-lg"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
- -->
 <br>
 <br>
 <section class="container-fluid section3" id="section3">
@@ -176,41 +145,6 @@
     <a href="#"><i class="fa fa-angle-up"></i></a>
 </div>
 
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2 class="text-center"><img style="width:100px;height:100px" src="resources/images/user.png" class="img-circle"><br>Login</h2>
-            </div>
-            <div class="modal-body row"><br>
-                <form role="form" method="post" action="login" accept-charset="UTF-8" class=" form col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-                    <div class="form-group">
-                        <input type="text" class="form-control input-lg" name="username" placeholder="Username / Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control input-lg" name="password" placeholder="Password" required>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-danger btn-lg btn-block">Sign In</button>
-                        <br><span><a href="#">Forget password ?</a></span><br>
-                        <br>
-                        <a href="Signup" class="btn btn-hero btn-lg btn-block">Register Now</a>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <h6 class="text-center"><a href="">Privacy is important to us. Click here to read why.</a></h6>
-            </div>
-        </div>
-    </div>
-</div>
-    scripts loaded here
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    
-    <script src="js/scripts.js"></script>
-     -->
+-->
 </body>
 </html>
