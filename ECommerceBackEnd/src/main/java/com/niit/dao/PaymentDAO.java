@@ -7,13 +7,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.model.ShippingAddress;
 import com.niit.model.PaymentMethod;
 
 @Repository
 @Transactional
 @EnableTransactionManagement
-public class ShippingAddressDAO {
+
+public class PaymentDAO {
 	
 	@Autowired
 	  SessionFactory sessionFactory;
@@ -23,17 +23,16 @@ public class ShippingAddressDAO {
 			return sessionFactory.openSession();
 		}
 
-		
-		@Transactional
-		public void addAddress(ShippingAddress u)
-		{
-			Session sess=getSession();
-			org.hibernate.Transaction tx=sess.beginTransaction();
-			sess.save(u);
-			tx.commit();
-			sess.close();
-		}
-		
-		
-		
-}
+			@Transactional
+			public void addPayment(PaymentMethod p)
+			{
+				Session sess=getSession();
+				org.hibernate.Transaction tx=sess.beginTransaction();
+				sess.save(p);
+				tx.commit();
+				sess.close();
+			}
+			
+			
+	}
+

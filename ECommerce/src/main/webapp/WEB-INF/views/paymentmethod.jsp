@@ -17,20 +17,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:import url="/header"></c:import>
+<jsp:include page="header.jsp"></jsp:include>
 <div class="container" style="padding-top: 100px;">
 	<div class="row-fluid">
-      <form class="form-horizontal" action="paymentmethod">
+      <form class="form-horizontal" action="paymentmethod1">
         <fieldset>
           <div id="legend">
             <legend class="">Payment</legend>
           </div>
           
-            <input type="radio" name="payment" value="Cash" />Cash<br />
-                        <input type="radio" name="payment" value="Check" />Check<br />
-                        <div class="form-actions">
-					<input type="submit" name="_eventId_submitPaymentMethod" value="Save" class="btn btn-md btn-success">
-						<input type="submit" name="_eventId_cancel" class="btn btn-md btn-danger">
+            			<input type="radio" name="paymentmethod" value="Cash on Delivery" />Cash on Delivery <br /><br>
+                        <input type="radio" name="paymentmethod" value="Credit Card" />Credit Card<br /><br>
+                        <input type="radio" name="paymentmethod" value="Debit Card" />Debit Card<br /><br>
+                        <br><div class="form-actions">
+						<input type="submit" value="Next" class="btn btn-md btn-danger">
 				</div>
           
        </fieldset>

@@ -177,7 +177,7 @@ public ModelAndView cart1(@PathVariable("productID") String productID)
 	{
 		
 		cartDAO.deleteCart(productname);
-		return new ModelAndView("redirect/cart");
+		return new ModelAndView("redirect/Cart3");
 		
 		
 	}

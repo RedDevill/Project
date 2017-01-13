@@ -35,6 +35,8 @@
 
 <h1 style="color: red"><dt>Thanks For Shopping With Us</dt></h1>
 <br><br>
+<h3  class="text-warning" style="margin-left:8%">Your order has been placed</h3>
+<br><br>
 <h3  class="text-warning">Your Product will be Shipped Within few Days</h3>
 </div>
 </hgroup> 

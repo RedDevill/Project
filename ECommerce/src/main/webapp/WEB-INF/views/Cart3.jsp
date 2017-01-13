@@ -141,7 +141,7 @@ app.controller('cartCtrl1', ['$scope', function($scope) {
                         <td>   </td>
                         <td>
 						<tr>
-							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+							<td><a href="product" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
 							<td><a href="/ECommerce/cart_checkout" class="btn btn-success btn-danger">Checkout <i class="fa fa-angle-right"></i></a></td>
 						</tr>

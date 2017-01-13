@@ -29,14 +29,14 @@
 <jsp:include page="header.jsp"></jsp:include>
 <br>
 <br>
-  <div class="row" style="margin-top:50px;">
+  <div class="row responsive" style="margin-top:50px;">
    <div class="col-md-4 col-md-offset-1">
             <legend ><a  href="http://www.jquery2dotnet.com"><i style="color:#f44d3c" class="glyphicon glyphicon-globe"></i></a> Shipping Address </legend>
             <form action="save" method="post" class="form" role="form">
         <fieldset>
 
           <!-- Text input-->
-          <div class="form-group">
+          <div class="form-group responsive">
             <label class="col-sm-2 control-label" for="textinput">Line 1</label>
             <div class="col-sm-10">
               <input name="line1" type="text" placeholder="Address Line 1" class="form-control">
@@ -90,7 +90,7 @@
 						<input type="submit" name="_eventId_cancel" class="btn btn-md btn-primary">
 				</div> -->
                 <button type="submit" class="btn btn-primary">Back</button>
-               <input  type="submit" value="next" class="btn btn-danger">  Next <span class="glyphicon glyphicon-play"></span></a> 
+               <input  type="submit" value="next" class="btn btn-danger"><span class="glyphicon glyphicon-play"></span></a> 
               </div>
             </div>
           </div>

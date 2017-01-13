@@ -68,6 +68,12 @@ public class Cart {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+	@Override
+	public String toString() {
+		return "Cart [cartID=" + cartID + ", productid=" + productid + ", productprice=" + productprice
+				+ ", productname=" + productname + ", username=" + username + ", qty=" + qty + ", addedDate="
+				+ addedDate + "]";
+	}
 	
 	
 

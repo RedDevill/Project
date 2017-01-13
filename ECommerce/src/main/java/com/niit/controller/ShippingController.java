@@ -5,11 +5,14 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
 import com.niit.dao.ShippingAddressDAO;
 import com.niit.model.ShippingAddress;
+import com.niit.model.PaymentMethod;
 
 @Controller
 public class ShippingController {
@@ -18,7 +21,7 @@ public class ShippingController {
 	ShippingAddressDAO shippingaddressDAO;
 	
 	@RequestMapping("/save")
-	public ModelAndView save(HttpServletRequest request,HttpSession session){
+	public ModelAndView save(HttpServletRequest request,HttpSession session, Model m){
 		ModelAndView mv = new ModelAndView("paymentmethod");
 		ShippingAddress u=new ShippingAddress();
         String username=(String)session.getAttribute("sessname");
@@ -40,10 +43,13 @@ public class ShippingController {
 		u.setCountry(country);
 		System.out.println("values are"+u);
 		shippingaddressDAO.addAddress(u);
-		mv.addObject("Address", u);
-		return mv;
-
+		Gson g=new Gson();
+		String addr=g.toJson(u);
+		System.out.println("address json"+addr);
+		mv.addObject("address", addr);
 		
+		return mv;	
 	}
 
+	
 }
