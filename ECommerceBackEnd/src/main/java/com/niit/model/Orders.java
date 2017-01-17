@@ -1,3 +1,4 @@
+
 package com.niit.model;
 
 import java.io.Serializable;
@@ -5,6 +6,8 @@ import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
@@ -17,6 +20,7 @@ import org.springframework.stereotype.Component;
 public class Orders implements Serializable{
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String orderid;
 	
 	private String username;

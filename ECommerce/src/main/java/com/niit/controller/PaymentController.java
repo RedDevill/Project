@@ -47,6 +47,12 @@ public class PaymentController {
 		mv.addObject("ca",ca);
 		Long total=(Long)cartDAO.getTotalAmount(username);
 		mv.addObject("g",total);
+		
+		Orders o=new Orders();
+		o.setShippingaddress(sa);
+		o.setGrandtotal(total);
+		o.setPaymentmethod(paymentmethod);
+		ordersDAO.insertOrder(o);
 		return mv;
 	}	
 
